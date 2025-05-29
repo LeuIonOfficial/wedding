@@ -11,11 +11,15 @@ import RSVP from "@/components/sections/RSVP";
 import Registry from "@/components/sections/Registry";
 import FAQ from "@/components/sections/FAQ";
 import { getTranslation } from "@/lib/getTranslations";
+import { extractGuestNames } from "@/lib/urlUtils";
 
 // Types for page props
 type PageProps = {
   params: {
     lang: string;
+  };
+  searchParams: {
+    guests?: string | string[];
   };
 };
 
@@ -24,7 +28,7 @@ export async function generateStaticParams() {
   return [{ lang: "en" }, { lang: "ru" }, { lang: "ro" }];
 }
 
-export default async function Home({ params }: PageProps) {
+export default async function Home({ params, searchParams }: PageProps) {
   // Validate language parameter
   if (!["en", "ru", "ro"].includes(params.lang)) {
     notFound();
@@ -33,11 +37,12 @@ export default async function Home({ params }: PageProps) {
   const lang = params.lang as Lang;
   const content = await getTranslation(lang);
 
-  console.log(content);
+  // Process guest names from URL parameters using utility function
+  const guestNames = extractGuestNames(searchParams);
 
   return (
     <main>
-      <Hero hero={content.hero} />
+      <Hero hero={content.hero} guestName={guestNames} />
       <Story story={content.story} />
       <Event event={content.event} />
       <Gallery gallery={content.gallery} />

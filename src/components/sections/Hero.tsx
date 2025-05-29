@@ -21,9 +21,11 @@ interface HeroProps {
     backgroundImage?: string;
     backgroundColor?: string;
   };
+  guestName?: string;
 }
 
-export default function Hero({ hero }: HeroProps) {
+export default function Hero(props: HeroProps) {
+  const { hero } = props;
   const [imageLoaded, setImageLoaded] = useState(false);
   const [isClient, setIsClient] = useState(false);
   
@@ -89,6 +91,19 @@ export default function Hero({ hero }: HeroProps) {
           transition={{ duration: 1, delay: 0.2 }}
         >
           <h1 className="font-cursive text-4xl sm:text-5xl md:text-7xl lg:text-8xl mb-4">{hero.names}</h1>
+          {props.guestName && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              <h2 className="font-serif text-xl sm:text-2xl md:text-3xl mb-4">
+                <span className="bg-white/30 px-4 py-2 rounded-lg backdrop-blur-sm">
+                  Welcome, {props.guestName}!
+                </span>
+              </h2>
+            </motion.div>
+          )}
         </motion.div>
 
         <motion.div

@@ -1,9 +1,9 @@
-'use client';
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { FaPaperPlane, FaCheck, FaTimes } from 'react-icons/fa';
-import { getBackgroundColor } from '@/lib/utils';
+"use client";
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { FaPaperPlane, FaCheck, FaTimes } from "react-icons/fa";
+import { getBackgroundColor } from "@/lib/utils";
 
 interface RSVPProps {
   rsvp: {
@@ -46,23 +46,24 @@ interface RSVPProps {
     };
     backgroundColor: string;
   };
+  guestName?: string;
 }
 
 export default function RSVP({ rsvp }: RSVPProps) {
   // Form state
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    attending: 'yes',
-    guests: '1',
-    dietary: '',
-    message: '',
+    name: "",
+    email: "",
+    attending: "yes",
+    guests: "1",
+    dietary: "",
+    message: "",
   });
 
   // Form submission state
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState<boolean | null>(null);
-  const [errorMessage, setErrorMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState("");
 
   // Animation for section title
   const [titleRef, titleInView] = useInView({
@@ -77,11 +78,15 @@ export default function RSVP({ rsvp }: RSVPProps) {
   });
 
   // Handle input changes
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
@@ -90,29 +95,29 @@ export default function RSVP({ rsvp }: RSVPProps) {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitSuccess(null);
-    setErrorMessage('');
+    setErrorMessage("");
 
     try {
       // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      
+      await new Promise((resolve) => setTimeout(resolve, 1500));
+
       // For demo purposes, we'll just console log the data and show success
-      console.log('RSVP Form Data:', formData);
-      
+      console.log("RSVP Form Data:", formData);
+
       // Show success message
       setSubmitSuccess(true);
-      
+
       // Reset form after success (optional)
       setFormData({
-        name: '',
-        email: '',
-        attending: 'yes',
-        guests: '1',
-        dietary: '',
-        message: '',
+        name: "",
+        email: "",
+        attending: "yes",
+        guests: "1",
+        dietary: "",
+        message: "",
       });
     } catch (error) {
-      console.error('RSVP submission error:', error);
+      console.error("RSVP submission error:", error);
       setSubmitSuccess(false);
       setErrorMessage(rsvp.confirmation.error);
     } finally {
@@ -123,11 +128,7 @@ export default function RSVP({ rsvp }: RSVPProps) {
   const backgroundColor = getBackgroundColor(rsvp.backgroundColor);
 
   return (
-    <section 
-      id="rsvp" 
-      className="py-16 md:py-24" 
-      style={{ backgroundColor }}
-    >
+    <section id="rsvp" className="py-16 md:py-24" style={{ backgroundColor }}>
       <div className="container-custom max-w-4xl">
         {/* Section title */}
         <motion.div
@@ -160,9 +161,12 @@ export default function RSVP({ rsvp }: RSVPProps) {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
-                {/* Name */}
+                {/* Name -*/}
                 <div>
-                  <label htmlFor="name" className="block text-primary-700 font-medium mb-2">
+                  <label
+                    htmlFor="name"
+                    className="block text-primary-700 font-medium mb-2"
+                  >
                     {rsvp.form.name.label}*
                   </label>
                   <input
@@ -179,7 +183,10 @@ export default function RSVP({ rsvp }: RSVPProps) {
 
                 {/* Email */}
                 <div>
-                  <label htmlFor="email" className="block text-primary-700 font-medium mb-2">
+                  <label
+                    htmlFor="email"
+                    className="block text-primary-700 font-medium mb-2"
+                  >
                     {rsvp.form.email.label}*
                   </label>
                   <input
@@ -205,7 +212,7 @@ export default function RSVP({ rsvp }: RSVPProps) {
                         type="radio"
                         name="attending"
                         value="yes"
-                        checked={formData.attending === 'yes'}
+                        checked={formData.attending === "yes"}
                         onChange={handleChange}
                         className="mr-2 text-accent focus:ring-accent"
                       />
@@ -216,7 +223,7 @@ export default function RSVP({ rsvp }: RSVPProps) {
                         type="radio"
                         name="attending"
                         value="no"
-                        checked={formData.attending === 'no'}
+                        checked={formData.attending === "no"}
                         onChange={handleChange}
                         className="mr-2 text-accent focus:ring-accent"
                       />
@@ -226,9 +233,12 @@ export default function RSVP({ rsvp }: RSVPProps) {
                 </div>
 
                 {/* Number of Guests (only show if attending) */}
-                {formData.attending === 'yes' && (
+                {formData.attending === "yes" && (
                   <div>
-                    <label htmlFor="guests" className="block text-primary-700 font-medium mb-2">
+                    <label
+                      htmlFor="guests"
+                      className="block text-primary-700 font-medium mb-2"
+                    >
                       {rsvp.form.guests.label}*
                     </label>
                     <select
@@ -239,17 +249,22 @@ export default function RSVP({ rsvp }: RSVPProps) {
                       required
                       className="w-full px-4 py-3 border border-primary-200 rounded-md focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
                     >
-                      {[1, 2, 3, 4, 5].map(num => (
-                        <option key={num} value={num}>{num}</option>
+                      {[1, 2, 3, 4, 5].map((num) => (
+                        <option key={num} value={num}>
+                          {num}
+                        </option>
                       ))}
                     </select>
                   </div>
                 )}
 
                 {/* Dietary Restrictions (only show if attending) */}
-                {formData.attending === 'yes' && (
+                {formData.attending === "yes" && (
                   <div>
-                    <label htmlFor="dietary" className="block text-primary-700 font-medium mb-2">
+                    <label
+                      htmlFor="dietary"
+                      className="block text-primary-700 font-medium mb-2"
+                    >
                       {rsvp.form.dietary.label}
                     </label>
                     <input
@@ -266,7 +281,10 @@ export default function RSVP({ rsvp }: RSVPProps) {
 
                 {/* Message */}
                 <div>
-                  <label htmlFor="message" className="block text-primary-700 font-medium mb-2">
+                  <label
+                    htmlFor="message"
+                    className="block text-primary-700 font-medium mb-2"
+                  >
                     {rsvp.form.message.label}
                   </label>
                   <textarea
@@ -294,14 +312,32 @@ export default function RSVP({ rsvp }: RSVPProps) {
                     type="submit"
                     disabled={isSubmitting}
                     className={`w-full flex items-center justify-center px-6 py-3 bg-accent text-white rounded-md font-medium transition-all duration-300 ${
-                      isSubmitting ? 'opacity-70 cursor-not-allowed' : 'hover:bg-accent-dark'
+                      isSubmitting
+                        ? "opacity-70 cursor-not-allowed"
+                        : "hover:bg-accent-dark"
                     }`}
                   >
                     {isSubmitting ? (
                       <>
-                        <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        <svg
+                          className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                        >
+                          <circle
+                            className="opacity-25"
+                            cx="12"
+                            cy="12"
+                            r="10"
+                            stroke="currentColor"
+                            strokeWidth="4"
+                          ></circle>
+                          <path
+                            className="opacity-75"
+                            fill="currentColor"
+                            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                          ></path>
                         </svg>
                         Processing...
                       </>

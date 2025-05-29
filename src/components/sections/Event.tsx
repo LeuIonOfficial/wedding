@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { FaMapMarkerAlt, FaClock, FaCalendarAlt } from "react-icons/fa";
 import { getBackgroundColor } from "@/lib/utils";
-import { GoogleMap, useJsApiLoader, Marker } from "@react-google-maps/api";
 
 interface EventProps {
   event: {
@@ -33,12 +32,6 @@ interface EventProps {
 }
 
 export default function Event({ event }: EventProps) {
-  // Google Maps integration
-  const { isLoaded } = useJsApiLoader({
-    id: "google-map-script",
-    googleMapsApiKey: "", // You would add your API key here in production
-  });
-
   // Animation refs
   const [titleRef, titleInView] = useInView({
     triggerOnce: true,
@@ -59,12 +52,6 @@ export default function Event({ event }: EventProps) {
     triggerOnce: true,
     threshold: 0.1,
   });
-
-  // Default center coordinates (Los Angeles)
-  const center = {
-    lat: 34.0522,
-    lng: -118.2437,
-  };
 
   // Get background colors or use fallbacks
   const ceremonyBgColor = getBackgroundColor(event.ceremony.backgroundColor);
@@ -237,21 +224,15 @@ export default function Event({ event }: EventProps) {
           transition={{ duration: 0.6 }}
           className="aspect-video w-full overflow-hidden rounded-lg shadow-md"
         >
-          {isLoaded ? (
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2723.031637713679!2d28.748059800000004!3d46.9610684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c97f9b89cabfa3%3A0xadfb85b48357acaa!2sHincesti%20Hwy%20294%2C%20MD-6801%2C%20Ialoveni!5e0!3m2!1sen!2s!4v1748512801854!5m2!1sen!2s"
-              width="100%"
-              height="100%"
-              style={{
-                border: "none",
-              }}
-              loading="lazy"
-            ></iframe>
-          ) : (
-            <div className="h-full w-full flex items-center justify-center bg-gray-100">
-              <p>Loading map...</p>
-            </div>
-          )}
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2723.031637713679!2d28.748059800000004!3d46.9610684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c97f9b89cabfa3%3A0xadfb85b48357acaa!2sHincesti%20Hwy%20294%2C%20MD-6801%2C%20Ialoveni!5e0!3m2!1sen!2s!4v1748512801854!5m2!1sen!2s"
+            width="100%"
+            height="100%"
+            style={{
+              border: "none",
+            }}
+            loading="lazy"
+          ></iframe>
         </motion.div>
       </div>
     </section>
