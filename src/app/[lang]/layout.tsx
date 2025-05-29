@@ -5,6 +5,7 @@ import LanguageSwitcher from "@/components/layout/LanguageSwitcher";
 import { Lang } from "@/types";
 import { getTranslation } from "@/lib/getTranslations";
 import Navigation from "@/components/layout/Navigation";
+import { Suspense } from "react";
 
 type LayoutProps = {
   children: React.ReactNode;
@@ -45,7 +46,9 @@ export default async function LangLayout({ children, params }: LayoutProps) {
   return (
     <>
       <div className="fixed top-5 right-12 z-50">
-        <LanguageSwitcher currentLang={lang} />
+        <Suspense fallback={null}>
+          <LanguageSwitcher currentLang={lang} />
+        </Suspense>
       </div>
       <Navigation navigation={content.navigation} lang={lang} />
       <main>{children}</main>
