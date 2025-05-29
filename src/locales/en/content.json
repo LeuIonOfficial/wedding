@@ -1,0 +1,297 @@
+{
+  "meta": {
+    "title": "John & Jane's Wedding",
+    "description": "Join us to celebrate our special day"
+  },
+  "hero": {
+    "names": "John & Jane",
+    "date": "September 15, 2024",
+    "location": "Los Angeles, California",
+    "countdown": {
+      "days": "Days",
+      "hours": "Hours",
+      "minutes": "Minutes",
+      "seconds": "Seconds"
+    },
+    "scrollCta": "Scroll Down",
+    "backgroundImage": "/images/hero-bg.svg",
+    "backgroundColor": "#f8d6cf"
+  },
+  "navigation": {
+    "story": "Our Story",
+    "event": "Event",
+    "gallery": "Gallery",
+    "party": "Wedding Party",
+    "rsvp": "RSVP",
+    "registry": "Registry",
+    "faq": "FAQ"
+  },
+  "story": {
+    "title": "Our Story",
+    "subtitle": "How we met and fell in love",
+    "timeline": [
+      {
+        "year": "2019",
+        "title": "We Met",
+        "description": "We first met at a friend's birthday party in downtown LA. Jane spilled her drink on John's new shoes, and that's how our conversation started.",
+        "image": "/images/story/met.jpg",
+        "backgroundColor": "#a3d1c0"
+      },
+      {
+        "year": "2020",
+        "title": "First Date",
+        "description": "Our first date was at a small Italian restaurant. We talked for hours and knew there was something special between us.",
+        "image": "/images/story/first-date.jpg",
+        "backgroundColor": "#f0a799"
+      },
+      {
+        "year": "2021",
+        "title": "Moving In Together",
+        "description": "After dating for a year, we decided to move in together. Our apartment quickly became our cozy sanctuary.",
+        "image": "/images/story/moving-in.jpg",
+        "backgroundColor": "#d1e8df"
+      },
+      {
+        "year": "2023",
+        "title": "The Proposal",
+        "description": "John proposed during a sunset hike at our favorite trail. He had the ring hidden in his backpack all day!",
+        "image": "/images/story/proposal.jpg",
+        "backgroundColor": "#f8d6cf"
+      }
+    ]
+  },
+  "event": {
+    "title": "Event Details",
+    "subtitle": "Join us for our celebration",
+    "ceremony": {
+      "title": "Ceremony",
+      "date": "September 15, 2024",
+      "time": "3:00 PM",
+      "address": "Graceful Gardens\n123 Blossom Lane\nLos Angeles, CA 90210",
+      "description": "The ceremony will take place in the Rose Garden. Please arrive 30 minutes early for seating.",
+      "image": "/images/event/ceremony.jpg",
+      "backgroundColor": "#f0a799"
+    },
+    "reception": {
+      "title": "Reception",
+      "date": "September 15, 2024",
+      "time": "5:00 PM",
+      "address": "Graceful Gardens - Grand Ballroom\n123 Blossom Lane\nLos Angeles, CA 90210",
+      "description": "Join us for dinner, dancing, and celebrating! The reception will follow immediately after the ceremony.",
+      "image": "/images/event/reception.jpg",
+      "backgroundColor": "#a3d1c0"
+    },
+    "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d423286.27405770525!2d-118.69192047471653!3d34.02016130653294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2sLos%20Angeles%2C%20CA%2C%20USA!5e0!3m2!1sen!2sus!4v1622839304757!5m2!1sen!2sus"
+  },
+  "gallery": {
+    "title": "Our Gallery",
+    "subtitle": "Memories we've shared",
+    "photos": [
+      {
+        "src": "/images/gallery/photo1.jpg",
+        "alt": "Beach vacation",
+        "caption": "Our trip to Hawaii",
+        "backgroundColor": "#d1e8df"
+      },
+      {
+        "src": "/images/gallery/photo2.jpg",
+        "alt": "Holiday celebration",
+        "caption": "Christmas with family",
+        "backgroundColor": "#f0a799"
+      },
+      {
+        "src": "/images/gallery/photo3.jpg",
+        "alt": "Hiking adventure",
+        "caption": "Conquering Mount Wilson",
+        "backgroundColor": "#a3d1c0"
+      },
+      {
+        "src": "/images/gallery/photo4.jpg",
+        "alt": "Road trip",
+        "caption": "Road trip to Big Sur",
+        "backgroundColor": "#f8d6cf"
+      },
+      {
+        "src": "/images/gallery/photo5.jpg",
+        "alt": "Cooking together",
+        "caption": "Our famous Sunday pancakes",
+        "backgroundColor": "#e87c69"
+      },
+      {
+        "src": "/images/gallery/photo6.jpg",
+        "alt": "Concert night",
+        "caption": "Our favorite band live",
+        "backgroundColor": "#75baa1"
+      }
+    ]
+  },
+  "party": {
+    "title": "Wedding Party",
+    "subtitle": "Meet our amazing wedding party",
+    "bridesmaids": {
+      "title": "Bridesmaids",
+      "members": [
+        {
+          "name": "Emily Rodriguez",
+          "role": "Maid of Honor",
+          "image": "/images/party/emily.jpg",
+          "message": "Best friends since kindergarten. I couldn't imagine this day without you by my side!",
+          "backgroundColor": "#f8d6cf"
+        },
+        {
+          "name": "Sarah Johnson",
+          "role": "Bridesmaid",
+          "image": "/images/party/sarah.jpg",
+          "message": "College roommates turned lifelong friends. Your support means the world to me!",
+          "backgroundColor": "#d1e8df"
+        },
+        {
+          "name": "Lisa Chen",
+          "role": "Bridesmaid",
+          "image": "/images/party/lisa.jpg",
+          "message": "Work friends who became real friends. Thank you for always making me laugh!",
+          "backgroundColor": "#f0a799"
+        }
+      ]
+    },
+    "groomsmen": {
+      "title": "Groomsmen",
+      "members": [
+        {
+          "name": "Michael Smith",
+          "role": "Best Man",
+          "image": "/images/party/michael.jpg",
+          "message": "Brothers from another mother. Thanks for always having my back!",
+          "backgroundColor": "#a3d1c0"
+        },
+        {
+          "name": "David Wilson",
+          "role": "Groomsman",
+          "image": "/images/party/david.jpg",
+          "message": "Friends since high school. You've been there for all my big moments!",
+          "backgroundColor": "#e87c69"
+        },
+        {
+          "name": "Robert Brown",
+          "role": "Groomsman",
+          "image": "/images/party/robert.jpg",
+          "message": "College roommate and adventure buddy. Looking forward to more adventures together!",
+          "backgroundColor": "#75baa1"
+        }
+      ]
+    }
+  },
+  "rsvp": {
+    "title": "RSVP",
+    "subtitle": "We hope you can join us!",
+    "deadline": "Please respond by August 1, 2024",
+    "form": {
+      "name": {
+        "label": "Full Name",
+        "placeholder": "Enter your full name"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "Enter your email address"
+      },
+      "attending": {
+        "label": "Will you be attending?",
+        "options": {
+          "yes": "Yes, I'll be there!",
+          "no": "Sorry, I can't make it"
+        }
+      },
+      "guests": {
+        "label": "Number of guests (including yourself)",
+        "placeholder": "Select number of guests"
+      },
+      "dietary": {
+        "label": "Dietary Restrictions",
+        "placeholder": "Please list any dietary restrictions"
+      },
+      "message": {
+        "label": "Message for the Couple",
+        "placeholder": "Optional message for the couple"
+      },
+      "submit": "Submit RSVP"
+    },
+    "confirmation": {
+      "success": "Thank you for your RSVP! We look forward to celebrating with you.",
+      "error": "Oops! Something went wrong. Please try again or contact us directly."
+    },
+    "backgroundColor": "#d1e8df"
+  },
+  "registry": {
+    "title": "Registry",
+    "subtitle": "Your presence is the greatest gift, but if you wish to give something more",
+    "items": [
+      {
+        "name": "Amazon",
+        "description": "Explore our wish list for our new home",
+        "url": "https://amazon.com",
+        "image": "/images/registry/amazon.jpg",
+        "backgroundColor": "#f0a799"
+      },
+      {
+        "name": "Target",
+        "description": "Help us furnish our space with your generous gifts",
+        "url": "https://target.com",
+        "image": "/images/registry/target.jpg",
+        "backgroundColor": "#a3d1c0"
+      },
+      {
+        "name": "Honeymoon Fund",
+        "description": "Contribute to our dream honeymoon in Italy",
+        "url": "https://honeyfund.com",
+        "image": "/images/registry/honeyfund.jpg",
+        "backgroundColor": "#f8d6cf"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything you need to know about our big day",
+    "questions": [
+      {
+        "question": "What should I wear?",
+        "answer": "The dress code is semi-formal. We recommend cocktail dresses for ladies and suits for gentlemen. The ceremony and reception will take place outdoors on grass, so please choose appropriate footwear."
+      },
+      {
+        "question": "Is parking available?",
+        "answer": "Yes, complimentary valet parking will be available at the venue. You may also use ride-sharing services if preferred."
+      },
+      {
+        "question": "Can I bring a plus one?",
+        "answer": "Due to venue capacity, we can only accommodate the guests listed on your invitation. Please refer to your invitation for the specific number of seats reserved for you."
+      },
+      {
+        "question": "Will the ceremony be indoors or outdoors?",
+        "answer": "Both the ceremony and reception will be held outdoors, weather permitting. We will have tents available in case of light rain, and an indoor backup plan in case of severe weather."
+      },
+      {
+        "question": "Are children welcome?",
+        "answer": "While we love your little ones, our wedding will be an adults-only celebration. We hope this gives you a night off to celebrate with us!"
+      },
+      {
+        "question": "What if I have dietary restrictions?",
+        "answer": "Please indicate any dietary restrictions on your RSVP. We will do our best to accommodate your needs."
+      }
+    ],
+    "contact": {
+      "title": "Still have questions?",
+      "message": "Feel free to reach out to us directly at:",
+      "email": "johnandjanewedding@example.com"
+    },
+    "backgroundColor": "#a3d1c0"
+  },
+  "footer": {
+    "message": "We can't wait to celebrate with you!",
+    "names": "John & Jane",
+    "date": "09.15.2024",
+    "copyright": "© 2024 John & Jane's Wedding",
+    "social": {
+      "instagram": "https://instagram.com/johnandjanewedding",
+      "facebook": "https://facebook.com/johnandjanewedding"
+    }
+  }
+}
