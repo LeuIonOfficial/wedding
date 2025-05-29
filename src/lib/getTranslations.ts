@@ -1,21 +1,25 @@
 import { Lang, TranslationContent } from "@/types";
 
 export async function getTranslation(lang: Lang): Promise<TranslationContent> {
+  const baseUrl =
+    typeof window === "undefined"
+      ? process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000" // fallback for local dev
+      : "";
+
   try {
     const response = await fetch(
-      `http://localhost:3000/locales/${lang}/content.json`,
+      new URL(`/locales/${lang}/content.json`, baseUrl).toString()
     );
     if (!response.ok) {
       throw new Error(`Failed to fetch ${lang} translation`);
     }
-    return response.json();
+    return await response.json();
   } catch (error) {
     console.error("Error loading translation:", error);
-    // Fallback to English if translation fails
-    const fallbackResponse = await fetch(
-      "http://localhost:3000/locales/en/content.json",
-    );
 
-    return fallbackResponse.json();
+    const fallbackResponse = await fetch(
+      new URL(`/locales/en/content.json`, baseUrl).toString()
+    );
+    return await fallbackResponse.json();
   }
 }
