@@ -68,6 +68,22 @@ export default function InvitationLinkGenerator({
   const selectedGuestLink = selectedGuest 
     ? generatedLinks.find(item => item.name === selectedGuest)?.link 
     : null;
+
+  const downloadCSV = () => {
+    if (generatedLinks.length === 0) return;
+    const header = 'Name,Link';
+    const rows = generatedLinks.map(item => `"${item.name.replace(/"/g, '""')}","${item.link}"`);
+    const csvContent = [header, ...rows].join('\n');
+    const blob = new Blob([csvContent], { type: 'text/csv' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'invitation-links.csv';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  };
   
   return (
     <div className="max-w-2xl mx-auto bg-white rounded-lg shadow p-6 my-8">
@@ -95,6 +111,12 @@ export default function InvitationLinkGenerator({
       
       {generatedLinks.length > 0 && (
         <div className="mt-8">
+          <button
+            onClick={downloadCSV}
+            className="mb-4 bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded transition-colors"
+          >
+            Export as Excel (CSV)
+          </button>
           <div className="flex border-b border-gray-200 mb-4">
             <button
               onClick={() => setActiveTab('list')}

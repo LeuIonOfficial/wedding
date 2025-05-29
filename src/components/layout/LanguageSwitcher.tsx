@@ -1,6 +1,6 @@
 'use client';
 import { useState, useRef, useEffect } from 'react';
-import { useRouter, usePathname } from 'next/navigation';
+import { useRouter, usePathname, useSearchParams } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Lang } from '@/types';
 import { getLanguageName } from '@/lib/utils';
@@ -13,6 +13,7 @@ export default function LanguageSwitcher({ currentLang }: LanguageSwitcherProps)
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
   const pathname = usePathname();
+  const searchParams = useSearchParams();
   const dropdownRef = useRef<HTMLDivElement>(null);
   
   const languages: Lang[] = ['en', 'ru', 'ro'];
@@ -43,7 +44,9 @@ export default function LanguageSwitcher({ currentLang }: LanguageSwitcherProps)
 
     // Get the path after the language code
     const pathAfterLang = pathname.split('/').slice(2).join('/');
-    const newPath = `/${lang}${pathAfterLang ? `/${pathAfterLang}` : ''}`;
+    // Preserve query params
+    const params = searchParams.toString();
+    const newPath = `/${lang}${pathAfterLang ? `/${pathAfterLang}` : ''}${params ? `?${params}` : ''}`;
     
     router.push(newPath);
     setIsOpen(false);
