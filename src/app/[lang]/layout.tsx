@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Footer from "@/components/layout/Footer";
-import LanguageSwitcher from "@/components/layout/LanguageSwitcher";
 import { Lang } from "@/types";
 import { getTranslation } from "@/lib/getTranslations";
 import Navigation from "@/components/layout/Navigation";
@@ -45,12 +44,10 @@ export default async function LangLayout({ children, params }: LayoutProps) {
 
   return (
     <>
-      <div className="fixed top-5 right-12 z-50">
-        <Suspense fallback={null}>
-          <LanguageSwitcher currentLang={lang} />
+      {/* Remove fixed LanguageSwitcher from layout, now in menu bar */}
+      <Suspense fallback={null}>
+        <Navigation navigation={content.navigation} lang={lang} />
         </Suspense>
-      </div>
-      <Navigation navigation={content.navigation} lang={lang} />
       <main>{children}</main>
       <Footer footer={content.footer} />
     </>
