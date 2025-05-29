@@ -3,7 +3,7 @@ import { Lang, TranslationContent } from "@/types";
 export async function getTranslation(lang: Lang): Promise<TranslationContent> {
   const baseUrl =
     typeof window === "undefined"
-      ? process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000" // fallback for local dev
+      ? process.env.VERCEL_URL || "http://localhost:3000" // fallback for local dev
       : "";
 
   try {
