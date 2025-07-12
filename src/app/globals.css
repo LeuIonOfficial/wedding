@@ -3,17 +3,17 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 248, 248, 248;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 34, 34, 34; /* #222 */
+  --background-start-rgb: 255, 255, 255; /* #fff */
+  --background-end-rgb: 238, 238, 238;   /* #eee */
   --perspective: 1000px;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --foreground-rgb: 238, 238, 238; /* #eee */
+    --background-start-rgb: 34, 34, 34; /* #222 */
+    --background-end-rgb: 0, 0, 0;      /* #000 */
   }
 }
 
@@ -91,11 +91,11 @@ body {
   }
   
   .btn-primary {
-    @apply bg-accent text-white hover:bg-accent-dark;
+    @apply bg-themegreen text-white hover:bg-themegreen-dark;
   }
   
   .btn-outline {
-    @apply border border-accent text-accent hover:bg-accent hover:text-white;
+    @apply border border-themegreen text-themegreen hover:bg-themegreen hover:text-white;
   }
   
   .section-title {

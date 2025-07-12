@@ -1,297 +1,239 @@
 {
-  "meta": {
-    "title": "Nunta lui John și Jane",
-    "description": "Alăturați-vă nouă pentru a sărbători ziua noastră specială"
-  },
-  "hero": {
-    "names": "John și Jane",
-    "date": "15 Septembrie 2024",
-    "location": "Los Angeles, California",
-    "countdown": {
-      "days": "Zile",
-      "hours": "Ore",
-      "minutes": "Minute",
-      "seconds": "Secunde"
-    },
-    "scrollCta": "Derulează în jos",
-    "backgroundImage": "/images/hero-bg.svg",
-    "backgroundColor": "#f8d6cf"
-  },
-  "navigation": {
-    "story": "Povestea Noastră",
-    "event": "Eveniment",
-    "gallery": "Galerie",
-    "party": "Nuntași",
-    "rsvp": "RSVP",
-    "registry": "Cadouri",
-    "faq": "Întrebări Frecvente"
-  },
-  "story": {
-    "title": "Povestea Noastră",
-    "subtitle": "Cum ne-am întâlnit și ne-am îndrăgostit",
-    "timeline": [
-      {
-        "year": "2019",
-        "title": "Ne-am întâlnit",
-        "description": "Ne-am întâlnit prima dată la ziua de naștere a unui prieten în centrul LA. Jane a vărsat băutura pe pantofii noi ai lui John, și așa a început conversația noastră.",
-        "image": "/images/story/met.jpg",
-        "backgroundColor": "#a3d1c0"
-      },
-      {
-        "year": "2020",
-        "title": "Prima întâlnire",
-        "description": "Prima noastră întâlnire a fost la un mic restaurant italian. Am vorbit ore întregi și am știut că există ceva special între noi.",
-        "image": "/images/story/first-date.jpg",
-        "backgroundColor": "#f0a799"
-      },
-      {
-        "year": "2021",
-        "title": "Ne-am mutat împreună",
-        "description": "După un an de relație, am decis să ne mutăm împreună. Apartamentul nostru a devenit rapid sanctuarul nostru confortabil.",
-        "image": "/images/story/moving-in.jpg",
-        "backgroundColor": "#d1e8df"
-      },
-      {
-        "year": "2023",
-        "title": "Cererea în căsătorie",
-        "description": "John a cerut-o în căsătorie în timpul unui apus pe traseul nostru preferat. Avea inelul ascuns în rucsac toată ziua!",
-        "image": "/images/story/proposal.jpg",
-        "backgroundColor": "#f8d6cf"
-      }
-    ]
-  },
-  "event": {
-    "title": "Detalii Eveniment",
-    "subtitle": "Alăturați-vă nouă pentru sărbătoarea noastră",
-    "ceremony": {
-      "title": "Ceremonia",
-      "date": "15 Septembrie 2024",
-      "time": "15:00",
-      "address": "Graceful Gardens\n123 Blossom Lane\nLos Angeles, CA 90210",
-      "description": "Ceremonia va avea loc în Grădina de Trandafiri. Vă rugăm să sosiți cu 30 de minute mai devreme pentru așezare.",
-      "image": "/images/event/ceremony.jpg",
-      "backgroundColor": "#f0a799"
-    },
-    "reception": {
-      "title": "Recepția",
-      "date": "15 Septembrie 2024",
-      "time": "17:00",
-      "address": "Graceful Gardens - Sala Mare de Bal\n123 Blossom Lane\nLos Angeles, CA 90210",
-      "description": "Alăturați-vă nouă pentru cină, dans și sărbătoare! Recepția va urma imediat după ceremonie.",
-      "image": "/images/event/reception.jpg",
-      "backgroundColor": "#a3d1c0"
-    },
-    "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d423286.27405770525!2d-118.69192047471653!3d34.02016130653294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2sLos%20Angeles%2C%20CA%2C%20USA!5e0!3m2!1sen!2sus!4v1622839304757!5m2!1sen!2sus"
-  },
-  "gallery": {
-    "title": "Galeria Noastră",
-    "subtitle": "Amintiri pe care le-am împărtășit",
-    "photos": [
-      {
-        "src": "/images/gallery/photo1.jpg",
-        "alt": "Vacanță la plajă",
-        "caption": "Călătoria noastră în Hawaii",
-        "backgroundColor": "#d1e8df"
-      },
-      {
-        "src": "/images/gallery/photo2.jpg",
-        "alt": "Sărbătoare de iarnă",
-        "caption": "Crăciun cu familia",
-        "backgroundColor": "#f0a799"
-      },
-      {
-        "src": "/images/gallery/photo3.jpg",
-        "alt": "Aventură de drumeție",
-        "caption": "Cucerind Muntele Wilson",
-        "backgroundColor": "#a3d1c0"
-      },
-      {
-        "src": "/images/gallery/photo4.jpg",
-        "alt": "Călătorie cu mașina",
-        "caption": "Călătorie spre Big Sur",
-        "backgroundColor": "#f8d6cf"
-      },
-      {
-        "src": "/images/gallery/photo5.jpg",
-        "alt": "Gătind împreună",
-        "caption": "Clătitele noastre faimoase de duminică",
-        "backgroundColor": "#e87c69"
-      },
-      {
-        "src": "/images/gallery/photo6.jpg",
-        "alt": "Seară de concert",
-        "caption": "Trupa noastră preferată live",
-        "backgroundColor": "#75baa1"
-      }
-    ]
-  },
-  "party": {
-    "title": "Nuntași",
-    "subtitle": "Cunoașteți echipa noastră uimitoare de nuntă",
-    "bridesmaids": {
-      "title": "Domnișoare de onoare",
-      "members": [
-        {
-          "name": "Emily Rodriguez",
-          "role": "Domnișoara de onoare principală",
-          "image": "/images/party/emily.jpg",
-          "message": "Cele mai bune prietene din grădiniță. Nu mi-aș putea imagina această zi fără tine alături de mine!",
-          "backgroundColor": "#f8d6cf"
-        },
-        {
-          "name": "Sarah Johnson",
-          "role": "Domnișoară de onoare",
-          "image": "/images/party/sarah.jpg",
-          "message": "Colege de cameră la facultate devenite prietene pe viață. Susținerea ta înseamnă totul pentru mine!",
-          "backgroundColor": "#d1e8df"
-        },
-        {
-          "name": "Lisa Chen",
-          "role": "Domnișoară de onoare",
-          "image": "/images/party/lisa.jpg",
-          "message": "Colege de serviciu care au devenit prietene adevărate. Îți mulțumesc că mă faci mereu să râd!",
-          "backgroundColor": "#f0a799"
-        }
-      ]
-    },
-    "groomsmen": {
-      "title": "Cavaleri de onoare",
-      "members": [
-        {
-          "name": "Michael Smith",
-          "role": "Cavaler de onoare principal",
-          "image": "/images/party/michael.jpg",
-          "message": "Frați dintr-o altă mamă. Mulțumesc că ai fost mereu alături de mine!",
-          "backgroundColor": "#a3d1c0"
-        },
-        {
-          "name": "David Wilson",
-          "role": "Cavaler de onoare",
-          "image": "/images/party/david.jpg",
-          "message": "Prieteni din liceu. Ai fost prezent în toate momentele mele importante!",
-          "backgroundColor": "#e87c69"
-        },
-        {
-          "name": "Robert Brown",
-          "role": "Cavaler de onoare",
-          "image": "/images/party/robert.jpg",
-          "message": "Coleg de cameră la facultate și tovarăș de aventuri. Aștept cu nerăbdare mai multe aventuri împreună!",
-          "backgroundColor": "#75baa1"
-        }
-      ]
-    }
-  },
-  "rsvp": {
-    "title": "RSVP",
-    "subtitle": "Sperăm că vă puteți alătura nouă!",
-    "deadline": "Vă rugăm să răspundeți până la 1 August 2024",
-    "form": {
-      "name": {
-        "label": "Nume complet",
-        "placeholder": "Introduceți numele complet"
-      },
-      "email": {
-        "label": "Email",
-        "placeholder": "Introduceți adresa de email"
-      },
-      "attending": {
-        "label": "Veți participa?",
-        "options": {
-          "yes": "Da, voi fi acolo!",
-          "no": "Îmi pare rău, nu pot participa"
-        }
-      },
-      "guests": {
-        "label": "Număr de invitați (inclusiv dumneavoastră)",
-        "placeholder": "Selectați numărul de invitați"
-      },
-      "dietary": {
-        "label": "Restricții alimentare",
-        "placeholder": "Vă rugăm să enumerați orice restricții alimentare"
-      },
-      "message": {
-        "label": "Mesaj pentru cuplu",
-        "placeholder": "Mesaj opțional pentru cuplu"
-      },
-      "submit": "Trimiteți RSVP"
-    },
-    "confirmation": {
-      "success": "Vă mulțumim pentru RSVP! Așteptăm cu nerăbdare să sărbătorim împreună.",
-      "error": "Ups! Ceva nu a funcționat. Vă rugăm să încercați din nou sau să ne contactați direct."
-    },
-    "backgroundColor": "#d1e8df"
-  },
-  "registry": {
-    "title": "Listă de cadouri",
-    "subtitle": "Prezența dumneavoastră este cel mai mare cadou, dar dacă doriți să oferiți ceva mai mult",
-    "items": [
-      {
-        "name": "Amazon",
-        "description": "Explorați lista noastră de dorințe pentru noua noastră casă",
-        "url": "https://amazon.com",
-        "image": "/images/registry/amazon.jpg",
-        "backgroundColor": "#f0a799"
-      },
-      {
-        "name": "Target",
-        "description": "Ajutați-ne să ne mobilăm spațiul cu cadourile dumneavoastră generoase",
-        "url": "https://target.com",
-        "image": "/images/registry/target.jpg",
-        "backgroundColor": "#a3d1c0"
-      },
-      {
-        "name": "Fond pentru luna de miere",
-        "description": "Contribuiți la luna noastră de miere de vis în Italia",
-        "url": "https://honeyfund.com",
-        "image": "/images/registry/honeyfund.jpg",
-        "backgroundColor": "#f8d6cf"
-      }
-    ]
-  },
-  "faq": {
-    "title": "Întrebări Frecvente",
-    "subtitle": "Tot ce trebuie să știți despre ziua noastră specială",
-    "questions": [
-      {
-        "question": "Ce ar trebui să port?",
-        "answer": "Codul vestimentar este semi-formal. Recomandăm rochii de cocktail pentru doamne și costume pentru domni. Ceremonia și recepția vor avea loc în aer liber pe iarbă, așa că vă rugăm să alegeți încălțăminte adecvată."
-      },
-      {
-        "question": "Este disponibilă parcarea?",
-        "answer": "Da, serviciul de parcare cu valet va fi disponibil gratuit la locație. Puteți utiliza și servicii de ride-sharing dacă preferați."
-      },
-      {
-        "question": "Pot aduce un partener?",
-        "answer": "Din cauza capacității locației, putem acomoda doar invitații menționați în invitația dumneavoastră. Vă rugăm să consultați invitația pentru numărul specific de locuri rezervate pentru dumneavoastră."
-      },
-      {
-        "question": "Ceremonia va fi în interior sau în aer liber?",
-        "answer": "Atât ceremonia, cât și recepția vor avea loc în aer liber, dacă vremea permite. Vom avea corturi disponibile în caz de ploaie ușoară și un plan de rezervă în interior în caz de vreme severă."
-      },
-      {
-        "question": "Sunt bine-veniți copiii?",
-        "answer": "Deși îi iubim pe cei mici, nunta noastră va fi o sărbătoare doar pentru adulți. Sperăm că acest lucru vă oferă o seară liberă pentru a sărbători cu noi!"
-      },
-      {
-        "question": "Ce fac dacă am restricții alimentare?",
-        "answer": "Vă rugăm să indicați orice restricții alimentare în RSVP-ul dumneavoastră. Vom face tot posibilul pentru a vă satisface nevoile."
-      }
-    ],
-    "contact": {
-      "title": "Mai aveți întrebări?",
-      "message": "Nu ezitați să ne contactați direct la:",
-      "email": "johnandjanewedding@example.com"
-    },
-    "backgroundColor": "#a3d1c0"
-  },
-  "footer": {
-    "message": "Abia așteptăm să sărbătorim cu dumneavoastră!",
-    "names": "John și Jane",
-    "date": "15.09.2024",
-    "copyright": "© 2024 Nunta lui John și Jane",
-    "social": {
-      "instagram": "https://instagram.com/johnandjanewedding",
-      "facebook": "https://facebook.com/johnandjanewedding"
-    }
-  }
+	"meta": {
+		"title": "Nunta lui Ion și Tatiana",
+		"description": "Alăturați-vă nouă pentru a sărbători ziua noastră specială"
+	},
+	"hero": {
+		"names": "Ion și Tatiana",
+		"date": "15 Septembrie 2024",
+		"location": "Los Angeles, California",
+		"countdown": {
+			"days": "Zile",
+			"hours": "Ore",
+			"minutes": "Minute",
+			"seconds": "Secunde"
+		},
+		"scrollCta": "Derulează în jos",
+		"backgroundColor": "#f8f8f8"
+	},
+	"navigation": {
+		"story": "Povestea Noastră",
+		"event": "Eveniment",
+		"gallery": "Galerie",
+		"rsvp": "RSVP",
+		"registry": "Cadouri",
+		"faq": "Întrebări Frecvente"
+	},
+	"story": {
+		"title": "Povestea Noastră",
+		"subtitle": "Cum două inimi au devenit una",
+		"timeline": [
+			{
+				"year": "2019",
+				"title": "Prima întâlnire",
+				"description": "Uneori, cele mai frumoase povești de dragoste încep cu momentele cele mai simple. Când ne-am întâlnit prima dată, am știut că există ceva special între noi.",
+				"backgroundColor": "#f8f8f8"
+			},
+			{
+				"year": "2020",
+				"title": "Apropiindu-ne",
+				"description": "Prin nenumărate conversații și vise împărtășite, am descoperit că suntem destinați să parcurgem această cale împreună.",
+				"backgroundColor": "#f0f0f0"
+			},
+			{
+				"year": "2022",
+				"title": "Construind viitorul nostru",
+				"description": "Împreună am creat o casă plină de dragoste, râsete și posibilități nesfârșite. Fiecare zi ne-a adus mai aproape.",
+				"backgroundColor": "#f5f5f5"
+			},
+			{
+				"year": "2024",
+				"title": "Cererea în căsătorie",
+				"description": "Într-un moment care s-a simțit ca destinul, Ion a cerut-o pe Tatiana să fie a lui pentru totdeauna. Răspunsul a fost un da răsunător, sigilând promisiunea noastră de dragoste eternă.",
+				"backgroundColor": "#f8f8f8"
+			}
+		]
+	},
+	"event": {
+		"title": "Detalii Eveniment",
+		"subtitle": "Alăturați-vă nouă pentru sărbătoarea noastră",
+		"ceremony": {
+			"title": "Ceremonia",
+			"date": "15 Septembrie 2024",
+			"time": "15:00",
+			"address": "Graceful Gardens\n123 Blossom Lane\nLos Angeles, CA 90210",
+			"description": "Ceremonia va avea loc în Grădina de Trandafiri. Vă rugăm să sosiți cu 30 de minute mai devreme pentru așezare.",
+			"image": "/images/event/ceremony.jpg",
+			"backgroundColor": "#f0a799"
+		},
+		"reception": {
+			"title": "Recepția",
+			"date": "15 Septembrie 2024",
+			"time": "17:00",
+			"address": "Graceful Gardens - Sala Mare de Bal\n123 Blossom Lane\nLos Angeles, CA 90210",
+			"description": "Alăturați-vă nouă pentru cină, dans și sărbătoare! Recepția va urma imediat după ceremonie.",
+			"image": "/images/event/reception.jpg",
+			"backgroundColor": "#a3d1c0"
+		},
+		"mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d423286.27405770525!2d-118.69192047471653!3d34.02016130653294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2sLos%20Angeles%2C%20CA%2C%20USA!5e0!3m2!1sen!2sus!4v1622839304757!5m2!1sen!2sus"
+	},
+	"gallery": {
+		"title": "Călătoria Noastră",
+		"subtitle": "Momentele care ne definesc dragostea",
+		"photos": [
+			{
+				"alt": "Ion și Tatiana împreună",
+				"caption": "Începutul veșniciei",
+				"backgroundColor": "#f0f0f0"
+			},
+			{
+				"alt": "Un moment tandru",
+				"caption": "În ochii tăi, mi-am găsit casa",
+				"backgroundColor": "#e8e8e8"
+			},
+			{
+				"alt": "Împărțind râsul",
+				"caption": "Mă faci să zâmbesc ca nimeni altul",
+				"backgroundColor": "#f5f5f5"
+			},
+			{
+				"alt": "Aproape unul de celălalt",
+				"caption": "Două inimi, un suflet",
+				"backgroundColor": "#eeeeee"
+			},
+			{
+				"alt": "Un moment liniștit",
+				"caption": "Perfect în simplitatea sa",
+				"backgroundColor": "#f3f3f3"
+			},
+			{
+				"alt": "Privind înainte",
+				"caption": "Viitorul nostru împreună",
+				"backgroundColor": "#f0f0f0"
+			},
+			{
+				"alt": "Bucurie pură",
+				"caption": "Fericirea înseamnă să fiu cu tine",
+				"backgroundColor": "#e8e8e8"
+			},
+			{
+				"alt": "Dragoste atemporală",
+				"caption": "Veșnicia începe acum",
+				"backgroundColor": "#f5f5f5"
+			}
+		]
+	},
+	"rsvp": {
+		"title": "RSVP",
+		"subtitle": "Sperăm că vă puteți alătura nouă!",
+		"deadline": "Vă rugăm să răspundeți până la 1 August 2024",
+		"form": {
+			"name": {
+				"label": "Nume complet",
+				"placeholder": "Introduceți numele complet"
+			},
+			"email": {
+				"label": "Email",
+				"placeholder": "Introduceți adresa de email"
+			},
+			"attending": {
+				"label": "Veți participa?",
+				"options": {
+					"yes": "Da, voi fi acolo!",
+					"no": "Îmi pare rău, nu pot participa"
+				}
+			},
+			"guests": {
+				"label": "Număr de invitați (inclusiv dumneavoastră)",
+				"placeholder": "Selectați numărul de invitați"
+			},
+			"dietary": {
+				"label": "Restricții alimentare",
+				"placeholder": "Vă rugăm să enumerați orice restricții alimentare"
+			},
+			"message": {
+				"label": "Mesaj pentru cuplu",
+				"placeholder": "Mesaj opțional pentru cuplu"
+			},
+			"submit": "Trimiteți RSVP"
+		},
+		"confirmation": {
+			"success": "Vă mulțumim pentru RSVP! Așteptăm cu nerăbdare să sărbătorim împreună.",
+			"error": "Ups! Ceva nu a funcționat. Vă rugăm să încercați din nou sau să ne contactați direct."
+		},
+		"backgroundColor": "#d1e8df"
+	},
+	"registry": {
+		"title": "Listă de cadouri",
+		"subtitle": "Prezența dumneavoastră este cel mai mare cadou, dar dacă doriți să oferiți ceva mai mult",
+		"items": [
+			{
+				"name": "Amazon",
+				"description": "Explorați lista noastră de dorințe pentru noua noastră casă",
+				"url": "https://amazon.com",
+				"image": "/images/registry/amazon.jpg",
+				"backgroundColor": "#f0a799"
+			},
+			{
+				"name": "Target",
+				"description": "Ajutați-ne să ne mobilăm spațiul cu cadourile dumneavoastră generoase",
+				"url": "https://target.com",
+				"image": "/images/registry/target.jpg",
+				"backgroundColor": "#a3d1c0"
+			},
+			{
+				"name": "Fond pentru luna de miere",
+				"description": "Contribuiți la luna noastră de miere de vis în Italia",
+				"url": "https://honeyfund.com",
+				"image": "/images/registry/honeyfund.jpg",
+				"backgroundColor": "#f8d6cf"
+			}
+		]
+	},
+	"faq": {
+		"title": "Întrebări Frecvente",
+		"subtitle": "Tot ce trebuie să știți despre ziua noastră specială",
+		"questions": [
+			{
+				"question": "Ce ar trebui să port?",
+				"answer": "Codul vestimentar este semi-formal. Recomandăm rochii de cocktail pentru doamne și costume pentru domni. Ceremonia și recepția vor avea loc în aer liber pe iarbă, așa că vă rugăm să alegeți încălțăminte adecvată."
+			},
+			{
+				"question": "Este disponibilă parcarea?",
+				"answer": "Da, serviciul de parcare cu valet va fi disponibil gratuit la locație. Puteți utiliza și servicii de ride-sharing dacă preferați."
+			},
+			{
+				"question": "Pot aduce un partener?",
+				"answer": "Din cauza capacității locației, putem acomoda doar invitații menționați în invitația dumneavoastră. Vă rugăm să consultați invitația pentru numărul specific de locuri rezervate pentru dumneavoastră."
+			},
+			{
+				"question": "Ceremonia va fi în interior sau în aer liber?",
+				"answer": "Atât ceremonia, cât și recepția vor avea loc în aer liber, dacă vremea permite. Vom avea corturi disponibile în caz de ploaie ușoară și un plan de rezervă în interior în caz de vreme severă."
+			},
+			{
+				"question": "Sunt bine-veniți copiii?",
+				"answer": "Deși îi iubim pe cei mici, nunta noastră va fi o sărbătoare doar pentru adulți. Sperăm că acest lucru vă oferă o seară liberă pentru a sărbători cu noi!"
+			},
+			{
+				"question": "Ce fac dacă am restricții alimentare?",
+				"answer": "Vă rugăm să indicați orice restricții alimentare în RSVP-ul dumneavoastră. Vom face tot posibilul pentru a vă satisface nevoile."
+			}
+		],
+		"contact": {
+			"title": "Mai aveți întrebări?",
+			"message": "Nu ezitați să ne contactați direct la:",
+			"email": "johnandjanewedding@example.com"
+		},
+		"backgroundColor": "#a3d1c0"
+	},
+	"footer": {
+		"message": "Abia așteptăm să sărbătorim cu dumneavoastră!",
+		"names": "John și Jane",
+		"date": "15.09.2024",
+		"copyright": "© 2024 Nunta lui John și Jane",
+		"social": {
+			"instagram": "https://instagram.com/johnandjanewedding",
+			"facebook": "https://facebook.com/johnandjanewedding"
+		}
+	}
 }
