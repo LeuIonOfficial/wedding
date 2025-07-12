@@ -125,7 +125,7 @@ export default function RSVP({ rsvp }: RSVPProps) {
 		}
 	};
 
-	const backgroundColor = getBackgroundColor(rsvp.backgroundColor, "#a3d1c0");
+	const backgroundColor = getBackgroundColor(rsvp.backgroundColor);
 
 	return (
 		<section

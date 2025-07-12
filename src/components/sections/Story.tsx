@@ -97,12 +97,12 @@ export default function Story({ story }: StoryProps) {
 										{/* Timeline dot */}
 										<div
 											className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-6 h-6 rounded-full border-2 border-themegreen bg-white hidden md:block"
-											style={{ top: "2rem" }}
+											style={{ top: "3rem" }}
 										/>
 
 										{/* Year marker */}
 										<div
-											className={`md:w-1/2 pb-8 md:pb-0 ${
+											className={`md:w-1/2 pb-8 md:pt-10 pt-0 md:pb-0 ${
 												isEven ? "md:pl-12" : "md:pr-12"
 											} flex ${
 												isEven
@@ -110,7 +110,7 @@ export default function Story({ story }: StoryProps) {
 													: "md:justify-end"
 											}`}
 										>
-											<div className="bg-themegreen text-white py-2 px-6 rounded-full inline-block font-medium">
+											<div className="bg-themegreen text-white py-2 px-6 rounded-full inline-block h-fit font-medium">
 												{item.year}
 											</div>
 										</div>

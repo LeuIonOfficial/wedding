@@ -41,11 +41,7 @@ export default function Hero(props: HeroProps) {
 	// Countdown renderer
 	const renderer = ({ days, hours, minutes, seconds, completed }: any) => {
 		if (completed) {
-			return (
-				<div className="text-center">
-					<h3 className="font-serif">Just Married! 💍</h3>
-				</div>
-			);
+			return null;
 		}
 
 		return (
@@ -57,10 +53,10 @@ export default function Hero(props: HeroProps) {
 					{ value: seconds, label: hero.countdown.seconds },
 				].map((item, index) => (
 					<div key={index} className="text-center">
-						<div className="text-xl sm:text-2xl md:text-4xl font-serif">
+						<div className="text-xl sm:text-2xl md:text-4xl font-serif text-white">
 							{item.value}
 						</div>
-						<div className="text-xxs sm:text-xs md:text-sm">
+						<div className="text-xxs sm:text-xs md:text-sm text-white/90">
 							{item.label}
 						</div>
 					</div>
@@ -85,9 +81,7 @@ export default function Hero(props: HeroProps) {
 				}`}
 				onLoad={() => setImageLoaded(true)}
 			/>
-
 			<div className="absolute inset-0 bg-gradient-to-b from-primary-900/30 via-primary-900/20 to-primary-900/40" />
-
 			<div className="container-custom relative z-10 text-center">
 				<motion.div
 					initial={{ opacity: 0, y: 20 }}
@@ -97,26 +91,13 @@ export default function Hero(props: HeroProps) {
 					<h1 className="font-cursive text-4xl sm:text-5xl md:text-7xl lg:text-8xl mb-4 text-primary-50 drop-shadow-lg">
 						{hero.names}
 					</h1>
-					{props.guestName && (
-						<motion.div
-							initial={{ opacity: 0, y: 20 }}
-							animate={{ opacity: 1, y: 0 }}
-							transition={{ duration: 0.8, delay: 0.4 }}
-						>
-							<h2 className="font-serif text-xl sm:text-2xl md:text-3xl mb-4">
-								<span className="bg-primary-50/90 text-primary-900 px-6 py-3 rounded-lg backdrop-blur-sm shadow-lg">
-									Welcome, {props.guestName}!
-								</span>
-							</h2>
-						</motion.div>
-					)}
 				</motion.div>
 
 				<motion.div
 					initial={{ opacity: 0 }}
 					animate={{ opacity: 1 }}
 					transition={{ duration: 1, delay: 0.6 }}
-					className="mb-8"
+					className="mb-4"
 				>
 					<p className="text-lg sm:text-xl md:text-2xl font-serif text-primary-50 drop-shadow-md">
 						{hero.date}
@@ -125,6 +106,21 @@ export default function Hero(props: HeroProps) {
 						{hero.location}
 					</p>
 				</motion.div>
+
+				{props.guestName && (
+					<motion.div
+						initial={{ opacity: 0, y: 20 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.8, delay: 0.4 }}
+						className="p-5"
+					>
+						<h2 className="font-serif text-xl sm:text-2xl md:text-3xl mb-4">
+							<span className="bg-primary-50/90 text-primary-900 px-6 py-3 rounded-lg backdrop-blur-sm shadow-lg">
+								Welcome, {props.guestName}!
+							</span>
+						</h2>
+					</motion.div>
+				)}
 
 				<motion.div
 					initial={{ opacity: 0, y: 20 }}
@@ -137,7 +133,6 @@ export default function Hero(props: HeroProps) {
 					)}
 				</motion.div>
 			</div>
-
 			<motion.div
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}
@@ -158,6 +153,13 @@ export default function Hero(props: HeroProps) {
 					</motion.div>
 				</a>
 			</motion.div>
+			{/* Mobile scroll indicator (mouse) */}
+			<div className="scroll-indicator block md:hidden">
+				<span className="mouse">
+					<span className="scroll"></span>
+				</span>
+				<p>{hero.scrollCta || "Scroll Down"}</p>
+			</div>
 		</section>
 	);
 }

@@ -143,3 +143,40 @@ body {
     opacity: 1;
   }
 }
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #fff;
+
+}
+.scroll-indicator .mouse {
+  display: inline-block;
+  width: 32px;
+  height: 48px;
+  border: 2px solid #fff;
+  border-radius: 16px;
+  position: relative;
+  margin-bottom: 0.5rem;
+  background: rgba(0,0,0,0.2);
+}
+.scroll-indicator .scroll {
+  display: block;
+  width: 6px;
+  height: 12px;
+  background: #fff;
+  border-radius: 3px;
+  position: absolute;
+  left: 50%;
+  top: 10px;
+  transform: translateX(-50%);
+  animation: scroll-indicator-move 1.2s infinite;
+}
+@keyframes scroll-indicator-move {
+  0% { opacity: 0; top: 10px; }
+  30% { opacity: 1; top: 18px; }
+  100% { opacity: 0; top: 28px; }
+}

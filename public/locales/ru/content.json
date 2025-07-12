@@ -64,7 +64,7 @@
 			"address": "Graceful Gardens\n123 Blossom Lane\nЛос-Анджелес, CA 90210",
 			"description": "Церемония пройдет в Розовом саду. Пожалуйста, приходите на 30 минут раньше для рассадки.",
 			"image": "/images/event/ceremony.jpg",
-			"backgroundColor": "#f0a799"
+			"backgroundColor": "#d1e8df"
 		},
 		"reception": {
 			"title": "Прием",
@@ -224,7 +224,7 @@
 			"message": "Не стесняйтесь обращаться к нам напрямую по адресу:",
 			"email": "johnandjanewedding@example.com"
 		},
-		"backgroundColor": "#a3d1c0"
+		"backgroundColor": "#d1e8df"
 	},
 	"footer": {
 		"message": "Мы не можем дождаться празднования с вами!",

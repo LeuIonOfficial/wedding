@@ -48,7 +48,7 @@ export default function FAQ({ faq }: FAQProps) {
 		threshold: 0.1,
 	});
 
-	const backgroundColor = getBackgroundColor(faq.backgroundColor, "#a3d1c0");
+	const backgroundColor = getBackgroundColor(faq.backgroundColor);
 
 	return (
 		<section
