@@ -119,7 +119,7 @@ export default function RSVP({ rsvp }: RSVPProps) {
   };
 
   return (
-    <section id="rsvp" className="py-16 md:py-24 bg-primary-50">
+    <section id="rsvp" className="py-16 md:py-24 bg-background-primary">
       <div className="container-custom max-w-4xl">
         {/* Section title */}
         <motion.div
@@ -129,9 +129,9 @@ export default function RSVP({ rsvp }: RSVPProps) {
           animate={titleInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="font-serif mb-2">{rsvp.title}</h2>
-          <p className="text-primary-700 max-w-2xl mx-auto">{rsvp.subtitle}</p>
-          <p className="text-primary-600 mt-2 font-medium">{deadline}</p>
+          <h2 className="font-serif mb-2 text-charcoal">{rsvp.title}</h2>
+          <p className="text-gray-600 max-w-2xl mx-auto">{rsvp.subtitle}</p>
+          <p className="text-gray-600 mt-2 font-medium">{deadline}</p>
         </motion.div>
 
         {/* Form */}
@@ -148,7 +148,7 @@ export default function RSVP({ rsvp }: RSVPProps) {
                   <FaCheck size={24} />
                 </div>
                 <h3 className="font-serif text-2xl mb-4">Thank You!</h3>
-                <p className="text-primary-600">{rsvp.confirmation.success}</p>
+                <p className="text-gray-600">{rsvp.confirmation.success}</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -156,7 +156,7 @@ export default function RSVP({ rsvp }: RSVPProps) {
                 <div>
                   <label
                     htmlFor="name"
-                    className="block text-primary-700 font-medium mb-2"
+                    className="block text-charcoal font-medium mb-2"
                   >
                     {rsvp.form.name.label}*
                   </label>
@@ -168,13 +168,13 @@ export default function RSVP({ rsvp }: RSVPProps) {
                     onChange={handleChange}
                     placeholder={rsvp.form.name.placeholder}
                     required
-                    className="w-full px-4 py-3 border border-primary-200 rounded-md focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
                   />
                 </div>
 
                 {/* Attending */}
                 <div>
-                  <label className="block text-primary-700 font-medium mb-2">
+                  <label className="block text-charcoal font-medium mb-2">
                     {rsvp.form.attending.label}*
                   </label>
                   <div className="flex space-x-4">
@@ -208,7 +208,7 @@ export default function RSVP({ rsvp }: RSVPProps) {
                   <div>
                     <label
                       htmlFor="guests"
-                      className="block text-primary-700 font-medium mb-2"
+                      className="block text-charcoal font-medium mb-2"
                     >
                       {rsvp.form.guests.label}*
                     </label>
@@ -218,7 +218,7 @@ export default function RSVP({ rsvp }: RSVPProps) {
                       value={formData.guests}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-primary-200 rounded-md focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
                     >
                       {[1, 2, 3, 4, 5].map((num) => (
                         <option key={num} value={num}>
@@ -234,7 +234,7 @@ export default function RSVP({ rsvp }: RSVPProps) {
                   <div>
                     <label
                       htmlFor="dietary"
-                      className="block text-primary-700 font-medium mb-2"
+                      className="block text-charcoal font-medium mb-2"
                     >
                       {rsvp.form.dietary.label}
                     </label>
@@ -245,7 +245,7 @@ export default function RSVP({ rsvp }: RSVPProps) {
                       value={formData.dietary}
                       onChange={handleChange}
                       placeholder={rsvp.form.dietary.placeholder}
-                      className="w-full px-4 py-3 border border-primary-200 rounded-md focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
                     />
                   </div>
                 )}
@@ -254,7 +254,7 @@ export default function RSVP({ rsvp }: RSVPProps) {
                 <div>
                   <label
                     htmlFor="message"
-                    className="block text-primary-700 font-medium mb-2"
+                    className="block text-charcoal font-medium mb-2"
                   >
                     {rsvp.form.message.label}
                   </label>
@@ -265,7 +265,7 @@ export default function RSVP({ rsvp }: RSVPProps) {
                     onChange={handleChange}
                     placeholder={rsvp.form.message.placeholder}
                     rows={4}
-                    className="w-full px-4 py-3 border border-primary-200 rounded-md focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
                   />
                 </div>
 

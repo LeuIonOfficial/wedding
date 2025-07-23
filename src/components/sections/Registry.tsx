@@ -17,7 +17,10 @@ export default function Registry({ registry }: RegistryProps) {
   });
 
   return (
-    <section id="registry" className="py-16 md:py-24">
+    <section
+      id="registry"
+      className="py-16 md:py-24 bg-background-primary text-black"
+    >
       <div className="container-custom">
         {/* Section title */}
         <motion.div
@@ -28,11 +31,8 @@ export default function Registry({ registry }: RegistryProps) {
           transition={{ duration: 0.6 }}
         >
           <h2 className="font-serif mb-2">{registry.title}</h2>
-          <p className="text-primary-500 max-w-2xl mx-auto">
-            {registry.subtitle}
-          </p>
+          <p className="text-black max-w-2xl mx-auto">{registry.subtitle}</p>
         </motion.div>
-
       </div>
     </section>
   );

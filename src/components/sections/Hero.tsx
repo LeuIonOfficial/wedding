@@ -25,7 +25,7 @@ export default function Hero(props: HeroProps) {
 
   // Hardcoded values
   const backgroundImage = "/images/hero/№999_686-2.JPG";
-  const backgroundColor = "#f8f8f8";
+  const backgroundColor = "#fdf2f2";
   const names = getCoupleNames();
   const date = getWeddingDate();
   const location = getWeddingLocation();
@@ -71,8 +71,7 @@ export default function Hero(props: HeroProps) {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
-      style={{ backgroundColor: backgroundColor }}
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background-primary"
     >
       <Image
         src={backgroundImage}
@@ -84,14 +83,14 @@ export default function Hero(props: HeroProps) {
         }`}
         onLoad={() => setImageLoaded(true)}
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-primary-900/30 via-primary-900/20 to-primary-900/40" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/40" />
       <div className="container-custom relative z-10 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
         >
-          <h1 className="font-cursive text-4xl sm:text-5xl md:text-7xl lg:text-8xl mb-4 text-primary-50 drop-shadow-lg">
+          <h1 className="font-cursive text-4xl sm:text-5xl md:text-7xl lg:text-8xl mb-4 text-white drop-shadow-lg">
             {names}
           </h1>
         </motion.div>
@@ -102,10 +101,10 @@ export default function Hero(props: HeroProps) {
           transition={{ duration: 1, delay: 0.6 }}
           className="mb-4"
         >
-          <p className="text-lg sm:text-xl md:text-2xl font-serif text-primary-50 drop-shadow-md">
+          <p className="text-lg sm:text-xl md:text-2xl font-serif text-white drop-shadow-md">
             {date}
           </p>
-          <p className="text-base sm:text-lg md:text-xl text-primary-50/90 drop-shadow-md">
+          <p className="text-base sm:text-lg md:text-xl text-white/90 drop-shadow-md">
             {location}
           </p>
         </motion.div>
@@ -118,7 +117,7 @@ export default function Hero(props: HeroProps) {
             className="p-5"
           >
             <h2 className="font-serif text-xl sm:text-2xl md:text-3xl mb-4">
-              <span className="bg-primary-50/90 text-primary-900 px-6 py-3 rounded-lg backdrop-blur-sm shadow-lg">
+              <span className="bg-white/90 text-charcoal border border-accent px-6 py-3 rounded-lg backdrop-blur-sm shadow-lg">
                 Welcome, {props.guestName}!
               </span>
             </h2>

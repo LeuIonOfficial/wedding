@@ -23,7 +23,7 @@ const timelineImages = [
 ];
 
 const timelineYears = ["2022", "2023", "2024"];
-const timelineColors = ["#f8f8f8", "#f0f0f0", "#f8f8f8"];
+const timelineColors = ["#fdf2f2", "#fefdfb", "#fdf2f2"];
 
 export default function Story({ story }: StoryProps) {
   // Fade-in animation for section title
@@ -33,7 +33,7 @@ export default function Story({ story }: StoryProps) {
   });
 
   return (
-    <section id="story" className="py-16 md:py-24">
+    <section id="story" className="py-16 md:py-24 bg-background-primary">
       <div className="container-custom">
         {/* Section title */}
         <motion.div
@@ -43,14 +43,14 @@ export default function Story({ story }: StoryProps) {
           animate={titleInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="font-serif mb-2">{story.title}</h2>
-          <p className="text-primary-500 max-w-2xl mx-auto">{story.subtitle}</p>
+          <h2 className="font-serif mb-2 text-charcoal">{story.title}</h2>
+          <p className="text-gray-600 max-w-2xl mx-auto">{story.subtitle}</p>
         </motion.div>
 
         {/* Timeline */}
         <div className="relative">
           {/* Timeline line */}
-          <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 top-0 bottom-0 w-0.5 bg-primary-200 hidden md:block" />
+          <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 top-0 bottom-0 w-0.5 bg-accent hidden md:block" />
 
           {/* Timeline items */}
           <div className="space-y-12 md:space-y-0">
@@ -82,7 +82,7 @@ export default function Story({ story }: StoryProps) {
                   >
                     {/* Timeline dot */}
                     <div
-                      className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-6 h-6 rounded-full border-2 border-primary-300 bg-white hidden md:block"
+                      className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-6 h-6 rounded-full border-2 border-accent bg-white hidden md:block"
                       style={{ top: "3rem" }}
                     />
 
@@ -92,7 +92,7 @@ export default function Story({ story }: StoryProps) {
                         isEven ? "md:pl-12" : "md:pr-12"
                       } flex ${isEven ? "md:justify-start" : "md:justify-end"}`}
                     >
-                      <div className="bg-primary-300 text-white py-2 px-6 rounded-full inline-block h-fit font-medium">
+                      <div className="bg-accent text-white py-2 px-6 rounded-full inline-block h-fit font-medium">
                         {year}
                       </div>
                     </div>
@@ -125,8 +125,10 @@ export default function Story({ story }: StoryProps) {
                           </div>
                         )}
                         <div className="p-6">
-                          <h4 className="font-serif mb-2">{item.title}</h4>
-                          <p className="text-primary-600">{item.description}</p>
+                          <h4 className="font-serif mb-2 text-charcoal">
+                            {item.title}
+                          </h4>
+                          <p className="text-gray-600">{item.description}</p>
                         </div>
                       </div>
                     </div>

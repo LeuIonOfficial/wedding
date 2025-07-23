@@ -32,7 +32,7 @@ export default function Event({ event }: EventProps) {
     time: getCeremonyTime(),
     address: getWeddingAddress(),
     image: "/images/event/ceremony.jpg",
-    backgroundColor: "#f0a799",
+    backgroundColor: "#E8C4C4",
   };
 
   const receptionData = {
@@ -40,7 +40,7 @@ export default function Event({ event }: EventProps) {
     time: getReceptionTime(),
     address: getWeddingAddress(),
     image: "/images/event/reception.jpg",
-    backgroundColor: "#a3d1c0",
+    backgroundColor: "#D4C4A8",
   };
 
   const mapUrl =
@@ -77,7 +77,7 @@ export default function Event({ event }: EventProps) {
   };
 
   return (
-    <section id="event" className="py-16 md:py-24 bg-accent-50">
+    <section id="event" className="py-16 md:py-24 bg-background-secondary">
       <div className="container-custom">
         {/* Section title */}
         <motion.div
@@ -87,8 +87,8 @@ export default function Event({ event }: EventProps) {
           animate={titleInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="font-serif mb-2">{event.title}</h2>
-          <p className="text-primary-500 max-w-2xl mx-auto">{event.subtitle}</p>
+          <h2 className="font-serif mb-2 text-charcoal">{event.title}</h2>
+          <p className="text-gray-600 max-w-2xl mx-auto">{event.subtitle}</p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
@@ -112,7 +112,7 @@ export default function Event({ event }: EventProps) {
                 />
               </div>
             ) : (
-              <div className="h-64 w-full flex items-center justify-center bg-accent-50">
+              <div className="h-64 w-full flex items-center justify-center bg-white">
                 <h3 className="text-white font-serif text-2xl">
                   {event.ceremony.title}
                 </h3>
@@ -125,21 +125,21 @@ export default function Event({ event }: EventProps) {
 
               <div className="space-y-4">
                 <div className="flex items-start">
-                  <FaCalendarAlt className="text-accent mt-1 mr-3" />
+                  <FaCalendarAlt className="text-charcoal mt-1 mr-3" />
                   <div>
                     <p className="font-medium">{ceremonyData.date}</p>
                   </div>
                 </div>
 
                 <div className="flex items-start">
-                  <FaClock className="text-accent mt-1 mr-3" />
+                  <FaClock className="text-charcoal mt-1 mr-3" />
                   <div>
                     <p className="font-medium">{ceremonyData.time}</p>
                   </div>
                 </div>
 
                 <div className="flex items-start">
-                  <FaMapMarkerAlt className="text-accent mt-1 mr-3" />
+                  <FaMapMarkerAlt className="text-charcoal mt-1 mr-3" />
                   <div>
                     <p className="font-medium">
                       {formatAddress(ceremonyData.address)}
@@ -148,7 +148,7 @@ export default function Event({ event }: EventProps) {
                 </div>
               </div>
 
-              <div className="mt-4 pt-4 border-t border-primary-100">
+              <div className="mt-4 pt-4 border-t border-gray-200">
                 <p>{event.ceremony.description}</p>
               </div>
             </div>
@@ -190,21 +190,21 @@ export default function Event({ event }: EventProps) {
 
               <div className="space-y-4">
                 <div className="flex items-start">
-                  <FaCalendarAlt className="text-accent mt-1 mr-3" />
+                  <FaCalendarAlt className="text-charcoal mt-1 mr-3" />
                   <div>
                     <p className="font-medium">{receptionData.date}</p>
                   </div>
                 </div>
 
                 <div className="flex items-start">
-                  <FaClock className="text-accent mt-1 mr-3" />
+                  <FaClock className="text-charcoal mt-1 mr-3" />
                   <div>
                     <p className="font-medium">{receptionData.time}</p>
                   </div>
                 </div>
 
                 <div className="flex items-start">
-                  <FaMapMarkerAlt className="text-accent mt-1 mr-3" />
+                  <FaMapMarkerAlt className="text-charcoal mt-1 mr-3" />
                   <div>
                     <p className="font-medium">
                       {formatAddress(receptionData.address)}
@@ -213,7 +213,7 @@ export default function Event({ event }: EventProps) {
                 </div>
               </div>
 
-              <div className="mt-4 pt-4 border-t border-primary-100">
+              <div className="mt-4 pt-4 border-t border-gray-200">
                 <p>{event.reception.description}</p>
               </div>
             </div>

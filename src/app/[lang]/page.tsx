@@ -13,39 +13,39 @@ import { extractGuestNames } from "@/lib/urlUtils";
 
 // Types for page props
 type PageProps = {
-	params: {
-		lang: string;
-	};
-	searchParams: {
-		guests?: string | string[];
-	};
+  params: {
+    lang: string;
+  };
+  searchParams: {
+    guests?: string | string[];
+  };
 };
 
 // Generate static params for all supported languages
 export async function generateStaticParams() {
-	return [{ lang: "en" }, { lang: "ru" }, { lang: "ro" }];
+  return [{ lang: "en" }, { lang: "ru" }, { lang: "ro" }];
 }
 
 export default async function Home({ params, searchParams }: PageProps) {
-	// Validate language parameter
-	if (!["en", "ru", "ro"].includes(params.lang)) {
-		notFound();
-	}
+  // Validate language parameter
+  if (!["en", "ru", "ro"].includes(params.lang)) {
+    notFound();
+  }
 
-	const lang = params.lang as Lang;
-	const content = await getTranslation(lang);
+  const lang = params.lang as Lang;
+  const content = await getTranslation(lang);
 
-	// Process guest names from URL parameters using utility function
-	const guestNames = extractGuestNames(searchParams);
+  // Process guest names from URL parameters using utility function
+  const guestNames = extractGuestNames(searchParams);
 
-	return (
-		<main>
-			<Hero hero={content.hero} guestName={guestNames} />
-			<Story story={content.story} />
-			<Event event={content.event} />
-			<RSVP rsvp={content.rsvp} />
-			<Registry registry={content.registry} />
-			<FAQ faq={content.faq} />
-		</main>
-	);
+  return (
+    <main>
+      <Hero hero={content.hero} guestName={guestNames} />
+      <Story story={content.story} />
+      <Event event={content.event} />
+      <RSVP rsvp={content.rsvp} />
+      <FAQ faq={content.faq} />
+      <Registry registry={content.registry} />
+    </main>
+  );
 }

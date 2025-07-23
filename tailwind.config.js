@@ -11,53 +11,69 @@ module.exports = {
         xxs: "0.625rem", // 10px
       },
       colors: {
+        // Elegant wedding palette: soft blush pink, warm beige, charcoal
         primary: {
-          50: "#d1e8df",
-          100: "#a3d1c0",
-          200: "#8cc4a8",
-          300: "#75baa1",
-          400: "#5ea08a",
-          500: "#4e8c6c",
-          600: "#3d7355",
-          700: "#2d5a3e",
-          800: "#1c4027",
-          900: "#0c2710",
+          50: "#fdf2f2", // Very light blush
+          100: "#fce8e8", // Light blush
+          200: "#f9d1d1", // Medium-light blush
+          300: "#f5b5b5", // Medium blush
+          400: "#f08888", // Medium-dark blush
+          500: "#E8C4C4", // Main soft blush pink
+          600: "#e09999", // Darker blush
+          700: "#d66666", // Deep blush
+          800: "#c44444", // Very deep blush
+          900: "#a83333", // Dark rose
         },
+        // Secondary warm beige/champagne palette
         secondary: {
-          50: "#fdf2f0",
-          100: "#fbe5e1",
-          200: "#f7cbc3",
-          300: "#f3b1a5",
-          400: "#ef9787",
-          500: "#f0a799",
-          600: "#e8856b",
-          700: "#df633d",
-          800: "#b8502f",
-          900: "#7a3520",
+          50: "#fefdfb",
+          100: "#fcf9f4",
+          200: "#f7f0e6",
+          300: "#f1e6d4",
+          400: "#eadbbf",
+          500: "#D4C4A8", // Main warm beige/champagne
+          600: "#c4ae8f",
+          700: "#b39976",
+          800: "#9d845e",
+          900: "#876f47",
         },
-        neutral: {
-          50: "#ffffff",
-          100: "#f8f9fa",
-          200: "#f5f5f5",
-          300: "#eeeeee",
-          400: "#cccccc",
-          500: "#888888",
-          600: "#666666",
-          700: "#444444",
-          800: "#222222",
-          900: "#000000",
+        // Core colors
+        white: "#ffffff",
+        black: "#2C2C2C", // Deep charcoal black
+        // Main accent colors
+        blush: "#E8C4C4", // Main soft blush pink
+        champagne: "#D4C4A8", // Main warm beige/champagne
+        charcoal: "#2C2C2C", // Deep charcoal
+        // For consistent alternating backgrounds
+        background: {
+          primary: "#ffffff", // Clean white
+          secondary: "#fdf2f2", // Very light blush
+          tertiary: "#fefdfb", // Very light champagne
         },
+        // Interactive states
         accent: {
-          50: "#f8f8f8",
-          100: "#f0f0f0",
-          200: "#e8e8e8",
-          300: "#d0d0d0",
-          400: "#b8b8b8",
-          500: "#a0a0a0",
-          600: "#888888",
-          700: "#707070",
-          800: "#585858",
-          900: "#404040",
+          DEFAULT: "#E8C4C4", // Soft blush pink for active/hover/focus
+          hover: "#e09999", // Darker blush for hover
+          active: "#d66666", // Even darker for active
+        },
+        // Text colors
+        text: {
+          primary: "#2C2C2C", // Dark charcoal for headers
+          secondary: "#666666", // Medium gray for body text
+          light: "#888888", // Light gray for subtle text
+        },
+        // Keep gray scale for borders/subtle elements
+        gray: {
+          50: "#fafafa",
+          100: "#f4f4f4",
+          200: "#e4e4e4",
+          300: "#d4d4d4",
+          400: "#a3a3a3",
+          500: "#737373",
+          600: "#525252",
+          700: "#404040",
+          800: "#262626",
+          900: "#171717",
         },
       },
       fontFamily: {

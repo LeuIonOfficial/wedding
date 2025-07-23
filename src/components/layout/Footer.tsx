@@ -44,16 +44,16 @@ export default function Footer({ footer }: FooterProps) {
 	};
 
 	return (
-		<footer className="bg-neutral-200 py-12 relative">
+		<footer className="bg-primary-50 py-12 relative">
 			<div className="container-custom">
 				<div className="text-center mb-8">
-					<p className="font-cursive text-2xl text-primary-300 mb-2">
+					<p className="font-cursive text-2xl text-black mb-2">
 						{footer.message}
 					</p>
-					<h3 className="font-serif mb-1 text-neutral-900">
+					<h3 className="font-serif mb-1 text-black">
 						{names}
 					</h3>
-					<p className="text-neutral-600">{date}</p>
+					<p className="text-gray-600">{date}</p>
 				</div>
 
 				<div className="flex justify-center space-x-4 mb-8">
@@ -61,7 +61,7 @@ export default function Footer({ footer }: FooterProps) {
 						href={socialLinks.instagram}
 						target="_blank"
 						rel="noopener noreferrer"
-						className="text-primary-300 hover:text-primary-500 transition-colors duration-300"
+						className="text-black hover:text-gray-600 transition-colors duration-300"
 						aria-label="Instagram"
 					>
 						<FaInstagram size={24} />
@@ -70,16 +70,16 @@ export default function Footer({ footer }: FooterProps) {
 						href={socialLinks.facebook}
 						target="_blank"
 						rel="noopener noreferrer"
-						className="text-primary-300 hover:text-primary-500 transition-colors duration-300"
+						className="text-black hover:text-gray-600 transition-colors duration-300"
 						aria-label="Facebook"
 					>
 						<FaFacebook size={24} />
 					</a>
 				</div>
 
-				<div className="text-center text-neutral-600 text-sm">
+				<div className="text-center text-gray-600 text-sm">
 					<p className="flex items-center justify-center gap-1">
-						Made with <FaHeart className="text-primary-300" /> by the
+						Made with <FaHeart className="text-black" /> by the
 						happy couple
 					</p>
 					<p className="mt-2">{copyright}</p>
@@ -93,7 +93,7 @@ export default function Footer({ footer }: FooterProps) {
 					exit={{ opacity: 0 }}
 					whileHover={{ y: -5 }}
 					onClick={scrollToTop}
-					className="fixed bottom-6 right-6 p-3 bg-accent-600 text-white rounded-full shadow-lg z-50"
+					className="fixed bottom-6 right-6 p-3 bg-black text-white rounded-full shadow-lg z-50"
 					aria-label="Scroll to top"
 				>
 					<FaAngleUp size={20} />

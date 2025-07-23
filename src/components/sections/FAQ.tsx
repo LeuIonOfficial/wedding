@@ -48,7 +48,7 @@ export default function FAQ({ faq }: FAQProps) {
   });
 
   return (
-    <section id="faq" className="py-16 md:py-24 bg-primary-100">
+    <section id="faq" className="py-16 md:py-24 bg-background-secondary">
       <div className="container-custom max-w-4xl">
         {/* Section title */}
         <motion.div
@@ -58,8 +58,8 @@ export default function FAQ({ faq }: FAQProps) {
           animate={titleInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="font-serif mb-2">{faq.title}</h2>
-          <p className="text-neutral-700 max-w-2xl mx-auto">{faq.subtitle}</p>
+          <h2 className="font-serif mb-2 text-black">{faq.title}</h2>
+          <p className="text-black max-w-2xl mx-auto">{faq.subtitle}</p>
         </motion.div>
 
         {/* Questions */}
@@ -95,7 +95,7 @@ export default function FAQ({ faq }: FAQProps) {
                     animate={{ rotate: isOpen ? 180 : 0 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <FaChevronDown className="text-accent-600" />
+                    <FaChevronDown className="text-black" />
                   </motion.div>
                 </button>
 
@@ -108,9 +108,7 @@ export default function FAQ({ faq }: FAQProps) {
                   transition={{ duration: 0.3 }}
                   className="overflow-hidden"
                 >
-                  <div className="px-6 pb-4 text-neutral-600">
-                    {item.answer}
-                  </div>
+                  <div className="px-6 pb-4 text-black">{item.answer}</div>
                 </motion.div>
               </motion.div>
             );
@@ -126,10 +124,10 @@ export default function FAQ({ faq }: FAQProps) {
           className="bg-white p-8 rounded-lg shadow-md text-center"
         >
           <h3 className="font-serif text-2xl mb-4">{faq.contact.title}</h3>
-          <p className="text-neutral-600 mb-6">{faq.contact.message}</p>
+          <p className="text-black mb-6">{faq.contact.message}</p>
           <a
             href={`mailto:${contactEmail}`}
-            className="inline-flex items-center text-accent-600 hover:underline"
+            className="inline-flex items-center text-black hover:underline"
           >
             <FaEnvelope className="mr-2" />
             {contactEmail}
