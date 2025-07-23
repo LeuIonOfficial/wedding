@@ -5,7 +5,6 @@ import { Lang } from "@/types";
 import Hero from "@/components/sections/Hero";
 import Story from "@/components/sections/Story";
 import Event from "@/components/sections/Event";
-import Gallery from "@/components/sections/Gallery";
 import RSVP from "@/components/sections/RSVP";
 import Registry from "@/components/sections/Registry";
 import FAQ from "@/components/sections/FAQ";
@@ -44,7 +43,6 @@ export default async function Home({ params, searchParams }: PageProps) {
 			<Hero hero={content.hero} guestName={guestNames} />
 			<Story story={content.story} />
 			<Event event={content.event} />
-			<Gallery gallery={content.gallery} />
 			<RSVP rsvp={content.rsvp} />
 			<Registry registry={content.registry} />
 			<FAQ faq={content.faq} />

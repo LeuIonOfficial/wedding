@@ -91,7 +91,7 @@ export default function LanguageSwitcher({ currentLang }: LanguageSwitcherProps)
                   whileTap={{ scale: 0.98 }}
                   onClick={() => changeLanguage(lang)}
                   className={`w-full text-left px-3 py-2 text-xs md:text-sm md:px-4 ${
-                    lang === currentLang ? 'bg-primary-100 text-accent font-medium' : 'text-primary-700'
+                    lang === currentLang ? 'bg-neutral-200 text-accent-600 font-medium' : 'text-neutral-700'
                   }`}
                 >
                   <span className="hidden md:inline">{getLanguageName(lang)}</span>

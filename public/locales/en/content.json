@@ -1,239 +1,117 @@
 {
-	"meta": {
-		"title": "Ion & Tatiana's Wedding",
-		"description": "Join us to celebrate our special day"
-	},
-	"hero": {
-		"names": "Ion & Tatiana",
-		"date": "September 15, 2024",
-		"location": "Los Angeles, California",
-		"countdown": {
-			"days": "Days",
-			"hours": "Hours",
-			"minutes": "Minutes",
-			"seconds": "Seconds"
-		},
-		"scrollCta": "Scroll Down",
-		"backgroundColor": "#f8f8f8"
-	},
-	"navigation": {
-		"story": "Our Story",
-		"event": "Event",
-		"gallery": "Gallery",
-		"rsvp": "RSVP",
-		"registry": "Registry",
-		"faq": "FAQ"
-	},
-	"story": {
-		"title": "Our Love Story",
-		"subtitle": "How two hearts became one",
-		"timeline": [
-			{
-				"year": "2019",
-				"title": "First Meeting",
-				"description": "Sometimes the most beautiful love stories begin with the simplest moments. When we first met, we knew there was something special between us.",
-				"backgroundColor": "#f8f8f8"
-			},
-			{
-				"year": "2020",
-				"title": "Growing Closer",
-				"description": "Through countless conversations and shared dreams, we discovered that we were meant to walk this path together.",
-				"backgroundColor": "#f0f0f0"
-			},
-			{
-				"year": "2022",
-				"title": "Building Our Future",
-				"description": "Together we created a home filled with love, laughter, and endless possibilities. Every day brought us closer.",
-				"backgroundColor": "#f5f5f5"
-			},
-			{
-				"year": "2024",
-				"title": "The Proposal",
-				"description": "In a moment that felt like destiny, Ion asked Tatiana to be his forever. The answer was a resounding yes, sealing our promise of eternal love.",
-				"backgroundColor": "#f8f8f8"
-			}
-		]
-	},
-	"event": {
-		"title": "Event Details",
-		"subtitle": "Join us for our celebration",
-		"ceremony": {
-			"title": "Ceremony",
-			"date": "September 15, 2024",
-			"time": "3:00 PM",
-			"address": "Graceful Gardens\n123 Blossom Lane\nLos Angeles, CA 90210",
-			"description": "The ceremony will take place in the Rose Garden. Please arrive 30 minutes early for seating.",
-			"image": "/images/event/ceremony.jpg",
-			"backgroundColor": "#f0a799"
-		},
-		"reception": {
-			"title": "Reception",
-			"date": "September 15, 2024",
-			"time": "5:00 PM",
-			"address": "Graceful Gardens - Grand Ballroom\n123 Blossom Lane\nLos Angeles, CA 90210",
-			"description": "Join us for dinner, dancing, and celebrating! The reception will follow immediately after the ceremony.",
-			"image": "/images/event/reception.jpg",
-			"backgroundColor": "#a3d1c0"
-		},
-		"mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d423286.27405770525!2d-118.69192047471653!3d34.02016130653294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2sLos%20Angeles%2C%20CA%2C%20USA!5e0!3m2!1sen!2sus!4v1622839304757!5m2!1sen!2sus"
-	},
-	"gallery": {
-		"title": "Our Journey",
-		"subtitle": "Moments that define our love",
-		"photos": [
-			{
-				"alt": "Ion and Tatiana together",
-				"caption": "The beginning of forever",
-				"backgroundColor": "#f0f0f0"
-			},
-			{
-				"alt": "A tender moment",
-				"caption": "In your eyes, I found my home",
-				"backgroundColor": "#e8e8e8"
-			},
-			{
-				"alt": "Sharing laughter",
-				"caption": "You make me smile like no one else",
-				"backgroundColor": "#f5f5f5"
-			},
-			{
-				"alt": "Close together",
-				"caption": "Two hearts, one soul",
-				"backgroundColor": "#eeeeee"
-			},
-			{
-				"alt": "A quiet moment",
-				"caption": "Perfect in its simplicity",
-				"backgroundColor": "#f3f3f3"
-			},
-			{
-				"alt": "Looking ahead",
-				"caption": "Our future together",
-				"backgroundColor": "#f0f0f0"
-			},
-			{
-				"alt": "Pure joy",
-				"caption": "Happiness is being with you",
-				"backgroundColor": "#e8e8e8"
-			},
-			{
-				"alt": "Timeless love",
-				"caption": "Forever starts now",
-				"backgroundColor": "#f5f5f5"
-			}
-		]
-	},
-	"rsvp": {
-		"title": "RSVP",
-		"subtitle": "We hope you can join us!",
-		"deadline": "Please respond by August 1, 2024",
-		"form": {
-			"name": {
-				"label": "Full Name",
-				"placeholder": "Enter your full name"
-			},
-			"email": {
-				"label": "Email",
-				"placeholder": "Enter your email address"
-			},
-			"attending": {
-				"label": "Will you be attending?",
-				"options": {
-					"yes": "Yes, I'll be there!",
-					"no": "Sorry, I can't make it"
-				}
-			},
-			"guests": {
-				"label": "Number of guests (including yourself)",
-				"placeholder": "Select number of guests"
-			},
-			"dietary": {
-				"label": "Dietary Restrictions",
-				"placeholder": "Please list any dietary restrictions"
-			},
-			"message": {
-				"label": "Message for the Couple",
-				"placeholder": "Optional message for the couple"
-			},
-			"submit": "Submit RSVP"
-		},
-		"confirmation": {
-			"success": "Thank you for your RSVP! We look forward to celebrating with you.",
-			"error": "Oops! Something went wrong. Please try again or contact us directly."
-		},
-		"backgroundColor": "#d1e8df"
-	},
-	"registry": {
-		"title": "Registry",
-		"subtitle": "Your presence is the greatest gift, but if you wish to give something more",
-		"items": [
-			{
-				"name": "Amazon",
-				"description": "Explore our wish list for our new home",
-				"url": "https://amazon.com",
-				"image": "/images/registry/amazon.jpg",
-				"backgroundColor": "#f0a799"
-			},
-			{
-				"name": "Target",
-				"description": "Help us furnish our space with your generous gifts",
-				"url": "https://target.com",
-				"image": "/images/registry/target.jpg",
-				"backgroundColor": "#a3d1c0"
-			},
-			{
-				"name": "Honeymoon Fund",
-				"description": "Contribute to our dream honeymoon in Italy",
-				"url": "https://honeyfund.com",
-				"image": "/images/registry/honeyfund.jpg",
-				"backgroundColor": "#f8d6cf"
-			}
-		]
-	},
-	"faq": {
-		"title": "Frequently Asked Questions",
-		"subtitle": "Everything you need to know about our big day",
-		"questions": [
-			{
-				"question": "What should I wear?",
-				"answer": "The dress code is semi-formal. We recommend cocktail dresses for ladies and suits for gentlemen. The ceremony and reception will take place outdoors on grass, so please choose appropriate footwear."
-			},
-			{
-				"question": "Is parking available?",
-				"answer": "Yes, complimentary valet parking will be available at the venue. You may also use ride-sharing services if preferred."
-			},
-			{
-				"question": "Can I bring a plus one?",
-				"answer": "Due to venue capacity, we can only accommodate the guests listed on your invitation. Please refer to your invitation for the specific number of seats reserved for you."
-			},
-			{
-				"question": "Will the ceremony be indoors or outdoors?",
-				"answer": "Both the ceremony and reception will be held outdoors, weather permitting. We will have tents available in case of light rain, and an indoor backup plan in case of severe weather."
-			},
-			{
-				"question": "Are children welcome?",
-				"answer": "While we love your little ones, our wedding will be an adults-only celebration. We hope this gives you a night off to celebrate with us!"
-			},
-			{
-				"question": "What if I have dietary restrictions?",
-				"answer": "Please indicate any dietary restrictions on your RSVP. We will do our best to accommodate your needs."
-			}
-		],
-		"contact": {
-			"title": "Still have questions?",
-			"message": "Feel free to reach out to us directly at:",
-			"email": "johnandjanewedding@example.com"
-		},
-		"backgroundColor": "#a3d1c0"
-	},
-	"footer": {
-		"message": "We can't wait to celebrate with you!",
-		"names": "John & Jane",
-		"date": "09.15.2024",
-		"copyright": "© 2024 John & Jane's Wedding",
-		"social": {
-			"instagram": "https://instagram.com/johnandjanewedding",
-			"facebook": "https://facebook.com/johnandjanewedding"
-		}
-	}
+  "meta": {
+    "title": "Ion & Tatiana's Wedding",
+    "description": "Join us to celebrate our special day"
+  },
+  "hero": {
+    "scrollCta": "Scroll Down"
+  },
+  "navigation": {
+    "story": "Our Story",
+    "event": "Event",
+    "rsvp": "RSVP",
+    "registry": "Registry",
+    "faq": "FAQ"
+  },
+  "story": {
+    "title": "Our Love Story",
+    "subtitle": "How two hearts became one",
+    "timeline": [
+      {
+        "title": "First Meeting",
+        "description": "Work brought us together, a corporate party brought us closer, and the feeling that we were made for each other appeared immediately."
+      },
+      {
+        "title": "Growing Closer",
+        "description": "Shared views, sense of humor and warmth of soul - everything came together. We quickly realized that there was something more between us than just sympathy."
+      },
+      {
+        "title": "The Proposal",
+        "description": "It was that very moment when words are almost unnecessary. We just knew we wanted everything together."
+      }
+    ]
+  },
+  "event": {
+    "title": "Event Details",
+    "subtitle": "Join us for our celebration",
+    "ceremony": {
+      "title": "Ceremony",
+      "description": "The ceremony will take place in the Rose Garden. Please arrive 30 minutes early for seating."
+    },
+    "reception": {
+      "title": "Reception",
+      "description": "Join us for dinner, dancing, and celebrating! The reception will follow immediately after the ceremony."
+    }
+  },
+  "rsvp": {
+    "title": "RSVP",
+    "subtitle": "We hope you can join us!",
+    "form": {
+      "name": {
+        "label": "Full Name",
+        "placeholder": "Enter your full name"
+      },
+      "attending": {
+        "label": "Will you be attending?",
+        "options": {
+          "yes": "Yes, I'll be there!",
+          "no": "Sorry, I can't make it"
+        }
+      },
+      "guests": {
+        "label": "Number of guests (including yourself)",
+        "placeholder": "Select number of guests"
+      },
+      "dietary": {
+        "label": "Dietary Restrictions",
+        "placeholder": "Please list any dietary restrictions"
+      },
+      "message": {
+        "label": "Message for the Couple",
+        "placeholder": "Optional message for the couple"
+      },
+      "submit": "Submit RSVP"
+    },
+    "confirmation": {
+      "success": "Thank you for your RSVP! We look forward to celebrating with you.",
+      "error": "Oops! Something went wrong. Please try again or contact us directly."
+    }
+  },
+  "registry": {
+    "title": "Gentle Accents",
+    "subtitle": "We deeply appreciate your attention and care. But we ask you not to bring flowers - it will be difficult for us to preserve them after the celebration.\n\nIf you want to leave a warm memory - a book, wine or lottery ticket would be especially pleasant for us."
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything you need to know about our big day",
+    "questions": [
+      {
+        "question": "What should I wear?",
+        "answer": "We don't have a strict dress code - come in what is comfortable and beautiful for you. We will be happy with any looks, but please try to avoid particularly bright colors such as red and green."
+      },
+      {
+        "question": "Is parking available?",
+        "answer": "Yes, there is free parking at the event venue."
+      },
+      {
+        "question": "Can I bring a plus one?",
+        "answer": "Yes, of course - just let us know in advance so we can take everything into account."
+      },
+      {
+        "question": "Will the ceremony be indoors or outdoors?",
+        "answer": "The ceremony is planned outdoors, weather permitting. In case of rain, we will move to a tent where the event itself will take place."
+      },
+      {
+        "question": "How to get from Burlacheny village to the event venue?",
+        "answer": "For your convenience, a transfer will be organized - a bus will deliver guests to the venue and take them back. If you prefer to get there yourself, you can come by personal car."
+      }
+    ],
+    "contact": {
+      "title": "Still have questions?",
+      "message": "Feel free to reach out to us directly at:"
+    }
+  },
+  "footer": {
+    "message": "We can't wait to celebrate with you!"
+  }
 }

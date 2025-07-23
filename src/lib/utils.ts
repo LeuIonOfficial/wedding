@@ -63,3 +63,36 @@ export function createSlug(text: string): string {
     .replace(/[^\w ]+/g, '')
     .replace(/ +/g, '-');
 }
+
+// Wedding-specific utility functions
+export function getWeddingDate(): string {
+  return "May 30, 2026";
+}
+
+export function getWeddingDateFormatted(): string {
+  return "30.05.2026";
+}
+
+export function getWeddingDateTime(): Date {
+  return new Date("2026-05-30T17:00:00");
+}
+
+export function getWeddingLocation(): string {
+  return "Tesalia, Ialoveni";
+}
+
+export function getCoupleNames(): string {
+  return "Ion & Tatiana";
+}
+
+export function getCeremonyTime(): string {
+  return "5:00 PM";
+}
+
+export function getReceptionTime(): string {
+  return "6:00 PM";
+}
+
+export function getWeddingAddress(): string {
+  return "Tesalia\nIaloveni";
+}

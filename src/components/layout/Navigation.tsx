@@ -10,7 +10,6 @@ interface NavigationProps {
 	navigation: {
 		story: string;
 		event: string;
-		gallery: string;
 		rsvp: string;
 		registry: string;
 		faq: string;
@@ -46,7 +45,6 @@ export default function Navigation({ navigation, lang }: NavigationProps) {
 	const menuItems = [
 		{ key: "story", label: navigation.story },
 		{ key: "event", label: navigation.event },
-		{ key: "gallery", label: navigation.gallery },
 		{ key: "rsvp", label: navigation.rsvp },
 		{ key: "registry", label: navigation.registry },
 		{ key: "faq", label: navigation.faq },
@@ -60,7 +58,7 @@ export default function Navigation({ navigation, lang }: NavigationProps) {
 		<>
 			<header
 				className={`fixed top-0 left-0 w-full z-40 transition-all duration-300 ${
-					scrolled ? "bg-primary-50/90 shadow-sm" : "bg-transparent"
+					scrolled ? "bg-neutral-50/90 shadow-sm" : "bg-transparent"
 				}`}
 			>
 				<div
@@ -70,7 +68,7 @@ export default function Navigation({ navigation, lang }: NavigationProps) {
 				>
 					<Link
 						href={getLinkWithParams(`/${lang}`)}
-						className="text-xl font-cursive tracking-wide z-50 text-themegreen"
+						className="text-xl font-cursive tracking-wide z-50 text-primary-300"
 					>
 						J & J
 					</Link>
@@ -83,7 +81,7 @@ export default function Navigation({ navigation, lang }: NavigationProps) {
 										href={getLinkWithParams(
 											`/${lang}#${item.key}`
 										)}
-										className="text-sm hover:text-themegreen-dark transition-colors duration-300"
+										className="text-sm hover:text-primary-500 transition-colors duration-300"
 										onClick={() => setIsOpen(false)}
 									>
 										{item.label}
@@ -132,7 +130,7 @@ export default function Navigation({ navigation, lang }: NavigationProps) {
 													href={getLinkWithParams(
 														`/${lang}#${item.key}`
 													)}
-													className="text-xl font-serif hover:text-accent transition-colors duration-300"
+													className="text-xl font-serif hover:text-accent-600 transition-colors duration-300"
 													onClick={() =>
 														setIsOpen(false)
 													}

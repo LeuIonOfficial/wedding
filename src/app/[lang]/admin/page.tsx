@@ -39,7 +39,7 @@ export default async function AdminPage({ params }: AdminPageProps) {
         </div>
         
         <InvitationLinkGenerator 
-          title={`Create Invitation Links for ${content.hero.names}`}
+          title={`Create Invitation Links for Ion & Tatiana`}
           buttonText="Generate Guest Links"
         />
       </div>
