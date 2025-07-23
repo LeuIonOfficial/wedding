@@ -14,14 +14,12 @@ export interface TranslationContent {
       seconds: string;
     };
     scrollCta: string;
-    backgroundImage: string;
     backgroundColor: string;
   };
   navigation: {
     story: string;
     event: string;
     gallery: string;
-    party: string;
     rsvp: string;
     registry: string;
     faq: string;
@@ -69,30 +67,6 @@ export interface TranslationContent {
       caption: string;
       backgroundColor?: string;
     }[];
-  };
-  party: {
-    title: string;
-    subtitle: string;
-    bridesmaids: {
-      title: string;
-      members: {
-        name: string;
-        role: string;
-        image?: string;
-        message: string;
-        backgroundColor?: string;
-      }[];
-    };
-    groomsmen: {
-      title: string;
-      members: {
-        name: string;
-        role: string;
-        image?: string;
-        message: string;
-        backgroundColor?: string;
-      }[];
-    };
   };
   rsvp: {
     title: string;
@@ -172,4 +146,4 @@ export interface TranslationContent {
 }
 
 export type Lang = 'en' | 'ru' | 'ro';
-export type SectionId = 'hero' | 'story' | 'event' | 'gallery' | 'party' | 'rsvp' | 'registry' | 'faq';
+export type SectionId = 'hero' | 'story' | 'event' | 'gallery' | 'rsvp' | 'registry' | 'faq';

@@ -11,7 +11,6 @@ interface NavigationProps {
 		story: string;
 		event: string;
 		gallery: string;
-		party: string;
 		rsvp: string;
 		registry: string;
 		faq: string;
@@ -48,7 +47,6 @@ export default function Navigation({ navigation, lang }: NavigationProps) {
 		{ key: "story", label: navigation.story },
 		{ key: "event", label: navigation.event },
 		{ key: "gallery", label: navigation.gallery },
-		{ key: "party", label: navigation.party },
 		{ key: "rsvp", label: navigation.rsvp },
 		{ key: "registry", label: navigation.registry },
 		{ key: "faq", label: navigation.faq },
