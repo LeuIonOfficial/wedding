@@ -11,58 +11,59 @@ module.exports = {
         xxs: "0.625rem", // 10px
       },
       colors: {
-        // Elegant wedding palette: soft blush pink, warm beige, charcoal
+        // Refined 2025 palette: rose quartz, linen, deep charcoal, subtle grays
         primary: {
-          50: "#fdf2f2", // Very light blush
-          100: "#fce8e8", // Light blush
-          200: "#f9d1d1", // Medium-light blush
-          300: "#f5b5b5", // Medium blush
-          400: "#f08888", // Medium-dark blush
-          500: "#E8C4C4", // Main soft blush pink
-          600: "#e09999", // Darker blush
-          700: "#d66666", // Deep blush
-          800: "#c44444", // Very deep blush
-          900: "#a83333", // Dark rose
+          50: "#F8F4F6",
+          100: "#F1E8ED",
+          200: "#E6D5DE",
+          300: "#D9BECF",
+          400: "#CBA7BE",
+          500: "#B98FAE",
+          600: "#A7779E",
+          700: "#8E5F84",
+          800: "#744C6B",
+          900: "#5C3C55",
         },
-        // Secondary warm beige/champagne palette
+        // Secondary warm linen/champagne palette
         secondary: {
-          50: "#fefdfb",
-          100: "#fcf9f4",
-          200: "#f7f0e6",
-          300: "#f1e6d4",
-          400: "#eadbbf",
-          500: "#D4C4A8", // Main warm beige/champagne
-          600: "#c4ae8f",
-          700: "#b39976",
-          800: "#9d845e",
-          900: "#876f47",
+          50: "#FAF7F2",
+          100: "#F5EFE6",
+          200: "#EDE3D0",
+          300: "#E3D5BA",
+          400: "#D6C7A8",
+          500: "#C7B491",
+          600: "#B29F7C",
+          700: "#9C8866",
+          800: "#857253",
+          900: "#6E5C42",
         },
         // Core colors
         white: "#ffffff",
-        black: "#2C2C2C", // Deep charcoal black
-        // Main accent colors
-        blush: "#E8C4C4", // Main soft blush pink
-        champagne: "#D4C4A8", // Main warm beige/champagne
-        charcoal: "#2C2C2C", // Deep charcoal
-        // For consistent alternating backgrounds
+        black: "#1E1E1E", // Inky charcoal black
+        // Semantic tokens for legacy references
+        blush: "#B98FAE", // Soft rose quartz
+        champagne: "#C7B491", // Warm linen/champagne
+        charcoal: "#1E1E1E", // Deep charcoal
+        // Surfaces
         background: {
-          primary: "#ffffff", // Clean white
-          secondary: "#fdf2f2", // Very light blush
-          tertiary: "#fefdfb", // Very light champagne
+          primary: "#FFFEFD", // Off-white
+          secondary: "#FAF7F2", // Linen tint
+          tertiary: "#F8F4F6", // Rose quartz tint
         },
         // Interactive states
         accent: {
-          DEFAULT: "#E8C4C4", // Soft blush pink for active/hover/focus
-          hover: "#e09999", // Darker blush for hover
-          active: "#d66666", // Even darker for active
+          DEFAULT: "#B47C7C", // Dusty rose for CTAs
+          hover: "#A36F6F",
+          active: "#8E5F5F",
+          dark: "#7A5151",
         },
         // Text colors
         text: {
-          primary: "#2C2C2C", // Dark charcoal for headers
-          secondary: "#666666", // Medium gray for body text
-          light: "#888888", // Light gray for subtle text
+          primary: "#1E1E1E",
+          secondary: "#4B5563",
+          light: "#6B7280",
         },
-        // Keep gray scale for borders/subtle elements
+        // Grays for borders/subtle elements
         gray: {
           50: "#fafafa",
           100: "#f4f4f4",

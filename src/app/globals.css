@@ -3,17 +3,17 @@
 @tailwind utilities;
 
 :root {
-    --foreground-rgb: 44, 44, 44; /* #2C2C2C - Deep charcoal */
-    --background-start-rgb: 255, 255, 255; /* #FFFFFF - Clean white */
-    --background-end-rgb: 253, 242, 242; /* #fdf2f2 - Very light blush */
+    --foreground-rgb: 30, 30, 30; /* #1E1E1E - Inky charcoal */
+    --background-start-rgb: 255, 254, 253; /* #FFFEFD - Off-white */
+    --background-end-rgb: 250, 247, 242; /* #FAF7F2 - Linen tint */
     --perspective: 1000px;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
         --foreground-rgb: 238, 238, 238; /* #eee */
-        --background-start-rgb: 44, 44, 44; /* #2C2C2C - Deep charcoal */
-        --background-end-rgb: 168, 51, 51; /* #a83333 - Dark rose */
+        --background-start-rgb: 30, 30, 30; /* #1E1E1E - Inky charcoal */
+        --background-end-rgb: 122, 81, 81; /* #7A5151 - Accent dark */
     }
 }
 
@@ -155,7 +155,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
-    color: #ffff;
+    color: #fff;
 }
 .scroll-indicator .mouse {
     display: inline-block;

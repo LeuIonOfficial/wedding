@@ -13,14 +13,14 @@ interface FooterProps {
 
 export default function Footer({ footer }: FooterProps) {
 	const [isVisible, setIsVisible] = useState(false);
-	
+
 	// Hardcoded footer data
 	const names = getCoupleNames();
 	const date = getWeddingDateFormatted();
 	const copyright = `© 2026 ${getCoupleNames()}'s Wedding`;
 	const socialLinks = {
 		instagram: "https://instagram.com/johnandjanewedding",
-		facebook: "https://facebook.com/johnandjanewedding"
+		facebook: "https://facebook.com/johnandjanewedding",
 	};
 
 	// Show button when page is scrolled down
@@ -44,15 +44,13 @@ export default function Footer({ footer }: FooterProps) {
 	};
 
 	return (
-		<footer className="bg-primary-50 py-12 relative">
+		<footer className="bg-background-secondary py-12 relative">
 			<div className="container-custom">
 				<div className="text-center mb-8">
-					<p className="font-cursive text-2xl text-black mb-2">
+					<p className="font-cursive text-2xl text-charcoal mb-2">
 						{footer.message}
 					</p>
-					<h3 className="font-serif mb-1 text-black">
-						{names}
-					</h3>
+					<h3 className="font-serif mb-1 text-charcoal">{names}</h3>
 					<p className="text-gray-600">{date}</p>
 				</div>
 
@@ -61,7 +59,7 @@ export default function Footer({ footer }: FooterProps) {
 						href={socialLinks.instagram}
 						target="_blank"
 						rel="noopener noreferrer"
-						className="text-black hover:text-gray-600 transition-colors duration-300"
+						className="text-charcoal hover:text-gray-600 transition-colors duration-300"
 						aria-label="Instagram"
 					>
 						<FaInstagram size={24} />
@@ -70,7 +68,7 @@ export default function Footer({ footer }: FooterProps) {
 						href={socialLinks.facebook}
 						target="_blank"
 						rel="noopener noreferrer"
-						className="text-black hover:text-gray-600 transition-colors duration-300"
+						className="text-charcoal hover:text-gray-600 transition-colors duration-300"
 						aria-label="Facebook"
 					>
 						<FaFacebook size={24} />
@@ -79,7 +77,7 @@ export default function Footer({ footer }: FooterProps) {
 
 				<div className="text-center text-gray-600 text-sm">
 					<p className="flex items-center justify-center gap-1">
-						Made with <FaHeart className="text-black" /> by the
+						Made with <FaHeart className="text-charcoal" /> by the
 						happy couple
 					</p>
 					<p className="mt-2">{copyright}</p>
@@ -93,7 +91,7 @@ export default function Footer({ footer }: FooterProps) {
 					exit={{ opacity: 0 }}
 					whileHover={{ y: -5 }}
 					onClick={scrollToTop}
-					className="fixed bottom-6 right-6 p-3 bg-black text-white rounded-full shadow-lg z-50"
+					className="fixed bottom-6 right-6 p-3 bg-charcoal text-white rounded-full shadow-lg z-50"
 					aria-label="Scroll to top"
 				>
 					<FaAngleUp size={20} />
