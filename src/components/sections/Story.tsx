@@ -17,9 +17,9 @@ interface StoryProps {
 
 // Hardcoded timeline data
 const timelineImages = [
-  "/images/story/1.JPG", // 2022 - First Meeting
-  "/images/story/2.JPG", // 2023 - Growing Closer
-  "/images/story/3.JPG", // 2024 - The Proposal
+  "/images/story/1.jpg", // 2022 - First Meeting
+  "/images/story/2.jpg", // 2023 - Growing Closer
+  "/images/story/3.jpg", // 2024 - The Proposal
 ];
 
 const timelineYears = ["2022", "2023", "2024"];

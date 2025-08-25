@@ -39,8 +39,7 @@ export default function Hero(props: HeroProps) {
   };
 
   // Hardcoded values
-  const backgroundImage = "/images/hero/№999_686-2.JPG";
-  const backgroundColor = "#fdf2f2";
+  const backgroundImage = "/images/hero/№999_184-2.JPG";
   const names = getCoupleNames();
   const date = getWeddingDate();
   const location = getWeddingLocation();
