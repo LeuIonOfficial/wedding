@@ -2,32 +2,72 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-    --foreground-rgb: 44, 44, 44; /* #2C2C2C - Deep charcoal */
-    --background-start-rgb: 255, 255, 255; /* #FFFFFF - Clean white */
-    --background-end-rgb: 253, 242, 242; /* #fdf2f2 - Very light blush */
-    --perspective: 1000px;
+@layer base {
+  :root {
+    --radius: 0.5rem;
+    /* shadcn default gray colors */
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 47.4% 11.2%;
+  }
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --foreground-rgb: 238, 238, 238; /* #eee */
-        --background-start-rgb: 44, 44, 44; /* #2C2C2C - Deep charcoal */
-        --background-end-rgb: 168, 51, 51; /* #a83333 - Dark rose */
-    }
+/* Accent color themes */
+[data-accent="red"] {
+  --primary: 27 84% 58%;
+  --primary-foreground: 248 3% 98%;
 }
 
-body {
-    color: rgb(var(--foreground-rgb));
-    background: linear-gradient(
-            to bottom,
-            transparent,
-            rgb(var(--background-end-rgb))
-        )
-        rgb(var(--background-start-rgb));
+[data-accent="orange"] {
+  --primary: 41 79% 65%;
+  --primary-foreground: 248 3% 98%;
+}
+
+[data-accent="green"] {
+  --primary: 185 43% 60%;
+  --primary-foreground: 248 3% 98%;
+}
+
+[data-accent="blue"] {
+  --primary: 227 28% 40%;
+  --primary-foreground: 248 3% 98%;
+}
+
+[data-accent="purple"] {
+  --primary: 304 73% 63%;
+  --primary-foreground: 248 3% 98%;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
     overflow-x: hidden;
     width: 100%;
     max-width: 100vw;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 @layer base {
@@ -86,6 +126,16 @@ body {
     }
 }
 
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent;
+  }
+
+  .glass {
+    @apply bg-background/80 backdrop-blur-md border border-border/50;
+  }
+}
+
 @layer components {
     .container-custom {
         @apply container mx-auto px-4 sm:px-6 lg:px-8 max-w-full;
@@ -96,11 +146,11 @@ body {
     }
 
     .btn-primary {
-        @apply bg-accent text-white hover:bg-accent-hover;
+        @apply bg-primary text-primary-foreground hover:bg-primary/90;
     }
 
     .btn-outline {
-        @apply border border-accent text-accent hover:bg-accent hover:text-white;
+        @apply border border-primary text-primary hover:bg-primary hover:text-primary-foreground;
     }
 
     .section-title {
@@ -112,7 +162,7 @@ body {
     }
 
     .section-title p {
-        @apply text-gray-600 text-lg max-w-2xl mx-auto;
+        @apply text-muted-foreground text-lg max-w-2xl mx-auto;
     }
 }
 
@@ -155,23 +205,23 @@ body {
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
-    color: #ffff;
+    color: hsl(var(--primary-foreground));
 }
 .scroll-indicator .mouse {
     display: inline-block;
     width: 32px;
     height: 48px;
-    border: 2px solid #fff;
+    border: 2px solid hsl(var(--primary-foreground));
     border-radius: 16px;
     position: relative;
     margin-bottom: 0.5rem;
-    background: #2c2c2c;
+    background: hsl(var(--primary));
 }
 .scroll-indicator .scroll {
     display: block;
     width: 6px;
     height: 12px;
-    background: #fff;
+    background: hsl(var(--primary-foreground));
     border-radius: 3px;
     position: absolute;
     left: 50%;
@@ -192,4 +242,57 @@ body {
         opacity: 0;
         top: 28px;
     }
+}
+
+/* Magic UI Animations */
+@keyframes gradient {
+  to {
+    background-position: 200% center;
+  }
+}
+
+@keyframes line-shadow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes aurora {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes shiny-text {
+  0% {
+    background-position: -100% 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+.animate-gradient {
+  animation: gradient 3s linear infinite;
+}
+
+.animate-line-shadow {
+  animation: line-shadow 2s ease-in-out infinite;
+}
+
+.animate-aurora {
+  animation: aurora 8s ease-in-out infinite;
+}
+
+.animate-shiny-text {
+  animation: shiny-text 1s ease-in-out infinite;
 }

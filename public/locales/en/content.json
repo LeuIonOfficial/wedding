@@ -1,117 +1,117 @@
 {
-  "meta": {
-    "title": "Ion & Tatiana's Wedding",
-    "description": "Join us to celebrate our special day"
-  },
-  "hero": {
-    "scrollCta": "Scroll Down"
-  },
-  "navigation": {
-    "story": "Our Story",
-    "event": "Event",
-    "rsvp": "RSVP",
-    "registry": "Registry",
-    "faq": "FAQ"
-  },
-  "story": {
-    "title": "Our Love Story",
-    "subtitle": "How two hearts became one",
-    "timeline": [
-      {
-        "title": "First Meeting",
-        "description": "Work brought us together, a corporate party brought us closer, and the feeling that we were made for each other appeared immediately."
-      },
-      {
-        "title": "Growing Closer",
-        "description": "Shared views, sense of humor and warmth of soul - everything came together. We quickly realized that there was something more between us than just sympathy."
-      },
-      {
-        "title": "The Proposal",
-        "description": "It was that very moment when words are almost unnecessary. We just knew we wanted everything together."
-      }
-    ]
-  },
-  "event": {
-    "title": "Event Details",
-    "subtitle": "Join us for our celebration",
-    "ceremony": {
-      "title": "Ceremony",
-      "description": "The ceremony will take place in the Rose Garden. Please arrive 30 minutes early for seating."
-    },
-    "reception": {
-      "title": "Reception",
-      "description": "Join us for dinner, dancing, and celebrating! The reception will follow immediately after the ceremony."
-    }
-  },
-  "rsvp": {
-    "title": "RSVP",
-    "subtitle": "We hope you can join us!",
-    "form": {
-      "name": {
-        "label": "Full Name",
-        "placeholder": "Enter your full name"
-      },
-      "attending": {
-        "label": "Will you be attending?",
-        "options": {
-          "yes": "Yes, I'll be there!",
-          "no": "Sorry, I can't make it"
-        }
-      },
-      "guests": {
-        "label": "Number of guests (including yourself)",
-        "placeholder": "Select number of guests"
-      },
-      "dietary": {
-        "label": "Dietary Restrictions",
-        "placeholder": "Please list any dietary restrictions"
-      },
-      "message": {
-        "label": "Message for the Couple",
-        "placeholder": "Optional message for the couple"
-      },
-      "submit": "Submit RSVP"
-    },
-    "confirmation": {
-      "success": "Thank you for your RSVP! We look forward to celebrating with you.",
-      "error": "Oops! Something went wrong. Please try again or contact us directly."
-    }
-  },
-  "registry": {
-    "title": "Gentle Accents",
-    "subtitle": "We deeply appreciate your attention and care. But we ask you not to bring flowers - it will be difficult for us to preserve them after the celebration.\n\nIf you want to leave a warm memory - a book, wine or lottery ticket would be especially pleasant for us."
-  },
-  "faq": {
-    "title": "Frequently Asked Questions",
-    "subtitle": "Everything you need to know about our big day",
-    "questions": [
-      {
-        "question": "What should I wear?",
-        "answer": "We don't have a strict dress code - come in what is comfortable and beautiful for you. We will be happy with any looks, but please try to avoid particularly bright colors such as red and green."
-      },
-      {
-        "question": "Is parking available?",
-        "answer": "Yes, there is free parking at the event venue."
-      },
-      {
-        "question": "Can I bring a plus one?",
-        "answer": "Yes, of course - just let us know in advance so we can take everything into account."
-      },
-      {
-        "question": "Will the ceremony be indoors or outdoors?",
-        "answer": "The ceremony is planned outdoors, weather permitting. In case of rain, we will move to a tent where the event itself will take place."
-      },
-      {
-        "question": "How to get from Burlacheny village to the event venue?",
-        "answer": "For your convenience, a transfer will be organized - a bus will deliver guests to the venue and take them back. If you prefer to get there yourself, you can come by personal car."
-      }
-    ],
-    "contact": {
-      "title": "Still have questions?",
-      "message": "Feel free to reach out to us directly at:"
-    }
-  },
-  "footer": {
-    "message": "We can't wait to celebrate with you!"
-  }
+	"meta": {
+		"title": "Ion & Tatiana's Wedding",
+		"description": "Join us to celebrate our special day"
+	},
+	"hero": {
+		"scrollCta": "Scroll Down"
+	},
+	"navigation": {
+		"story": "Our Story",
+		"event": "Event",
+		"rsvp": "RSVP",
+		"registry": "Registry",
+		"faq": "FAQ"
+	},
+	"story": {
+		"title": "Our Love Story",
+		"subtitle": "How two hearts became one",
+		"timeline": [
+			{
+				"title": "First Meeting",
+				"description": "Work brought us together, a corporate party brought us closer, and the feeling that we were made for each other appeared immediately."
+			},
+			{
+				"title": "Growing Closer",
+				"description": "Shared views, sense of humor and warmth of soul - everything came together. We quickly realized that there was something more between us than just sympathy."
+			},
+			{
+				"title": "The Proposal",
+				"description": "It was that very moment when words are almost unnecessary. We just knew we wanted everything together."
+			}
+		]
+	},
+	"event": {
+		"title": "Event Details",
+		"subtitle": "Join us for our celebration",
+		"ceremony": {
+			"title": "Ceremony",
+			"description": "The ceremony will take place in the Rose Garden. Please arrive 30 minutes early for seating."
+		},
+		"reception": {
+			"title": "Reception",
+			"description": "Join us for dinner, dancing, and celebrating! The reception will follow immediately after the ceremony."
+		}
+	},
+	"rsvp": {
+		"title": "RSVP",
+		"subtitle": "We hope you can join us!",
+		"form": {
+			"name": {
+				"label": "Full Name",
+				"placeholder": "Enter your full name"
+			},
+			"attending": {
+				"label": "Will you be attending?",
+				"options": {
+					"yes": "Yes, I'll be there!",
+					"no": "Sorry, I can't make it"
+				}
+			},
+			"guests": {
+				"label": "Number of guests (including yourself)",
+				"placeholder": "Select number of guests"
+			},
+			"dietary": {
+				"label": "Dietary Restrictions",
+				"placeholder": "Please list any dietary restrictions"
+			},
+			"message": {
+				"label": "Message for the Couple",
+				"placeholder": "Optional message for the couple"
+			},
+			"submit": "Submit RSVP"
+		},
+		"confirmation": {
+			"success": "Thank you for your RSVP! We look forward to celebrating with you.",
+			"error": "Oops! Something went wrong. Please try again or contact us directly."
+		}
+	},
+	"registry": {
+		"title": "Gentle Accents",
+		"subtitle": "We deeply appreciate your attention and care. But we ask you not to bring flowers - it will be difficult for us to preserve them after the celebration.\n\nIf you want to leave a warm memory - a book, wine or lottery ticket would be especially pleasant for us."
+	},
+	"faq": {
+		"title": "Frequently Asked Questions",
+		"subtitle": "Everything you need to know about our big day",
+		"questions": [
+			{
+				"question": "What should I wear?",
+				"answer": "We don't have a strict dress code - come in what is comfortable and beautiful for you. We will be happy with any looks, but please try to avoid particularly bright colors such as red and green."
+			},
+			{
+				"question": "Is parking available?",
+				"answer": "Yes, there is free parking at the event venue."
+			},
+			{
+				"question": "Can I bring a plus one?",
+				"answer": "Yes, of course - just let us know in advance so we can take everything into account."
+			},
+			{
+				"question": "Will the ceremony be indoors or outdoors?",
+				"answer": "The ceremony is planned outdoors, weather permitting. In case of rain, we will move to a tent where the event itself will take place."
+			},
+			{
+				"question": "How to get from Burlacheny village to the event venue?",
+				"answer": "For your convenience, a transfer will be organized - a bus will deliver guests to the venue and take them back. If you prefer to get there yourself, you can come by personal car."
+			}
+		],
+		"contact": {
+			"title": "Still have questions?",
+			"message": "Feel free to reach out to us directly at:"
+		}
+	},
+	"footer": {
+		"message": "We can't wait to celebrate with you!"
+	}
 }

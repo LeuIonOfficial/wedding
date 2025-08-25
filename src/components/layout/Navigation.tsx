@@ -1,10 +1,25 @@
 "use client";
-import { useState, useEffect, useCallback, Suspense } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Lang } from "@/types";
 import LanguageSwitcher from "./LanguageSwitcher";
+import {
+  NavigationMenu,
+  NavigationMenuList,
+  NavigationMenuItem,
+  NavigationMenuLink,
+} from "@/components/ui/navigation-menu";
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import { cn } from "@/lib/utils";
+import { useTheme } from "next-themes";
+import { getLanguageName } from "@/lib/utils";
+import { useRouter, usePathname, useSearchParams } from 'next/navigation';
 
 interface NavigationProps {
   navigation: {
@@ -20,7 +35,10 @@ interface NavigationProps {
 export default function Navigation({ navigation, lang }: NavigationProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [scrollPosition, setScrollPosition] = useState(0);
+  const { setTheme, theme } = useTheme();
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
 
   // Handle scroll effect
   useEffect(() => {
@@ -41,48 +59,6 @@ export default function Navigation({ navigation, lang }: NavigationProps) {
     };
   }, [scrolled, isOpen]);
 
-  // Handle body scroll lock when menu is open
-  useEffect(() => {
-    if (isOpen) {
-      // Store current scroll position
-      const currentScrollY = window.scrollY;
-      setScrollPosition(currentScrollY);
-
-      // Lock body scroll
-      document.body.style.overflow = "hidden";
-      document.body.style.position = "fixed";
-      document.body.style.top = `-${currentScrollY}px`;
-      document.body.style.width = "100%";
-    } else if (scrollPosition > 0) {
-      // Restore body scroll
-      document.body.style.overflow = "";
-      document.body.style.position = "";
-      document.body.style.top = "";
-      document.body.style.width = "";
-
-      // Restore scroll position after a small delay
-      setTimeout(() => {
-        window.scrollTo(0, scrollPosition);
-      }, 0);
-    } else {
-      // Just unlock if no scroll position to restore
-      document.body.style.overflow = "";
-      document.body.style.position = "";
-      document.body.style.top = "";
-      document.body.style.width = "";
-    }
-
-    return () => {
-      // Cleanup on unmount
-      document.body.style.overflow = "";
-      document.body.style.position = "";
-      document.body.style.top = "";
-      document.body.style.width = "";
-    };
-  }, [isOpen, scrollPosition]);
-
-  const toggleMenu = () => setIsOpen(!isOpen);
-
   const menuItems = [
     { key: "story", label: navigation.story },
     { key: "event", label: navigation.event },
@@ -95,94 +71,141 @@ export default function Navigation({ navigation, lang }: NavigationProps) {
     return `${path}`;
   };
 
+  const changeLanguage = (newLang: Lang) => {
+    if (newLang === lang) return;
+    
+    const pathAfterLang = pathname.split('/').slice(2).join('/');
+    const params = searchParams.toString();
+    const newPath = `/${newLang}${pathAfterLang ? `/${pathAfterLang}` : ''}${params ? `?${params}` : ''}`;
+    
+    router.push(newPath);
+    setIsOpen(false);
+  };
+
+  const languages: Lang[] = ['en', 'ru', 'ro'];
+
   return (
-    <>
-      <header
-        className={`fixed top-0 left-0 w-full z-40 transition-all duration-300 ${
-          scrolled ? "bg-white/90 backdrop-blur-sm shadow-sm" : "bg-transparent"
-        }`}
-      >
-        <div
-          className={`container-custom py-4 flex justify-between items-center ${
-            isOpen && "overscroll-none"
-          }`}
+    <header
+      className={cn(
+        "fixed top-0 left-0 w-full z-40 transition-all duration-300",
+        scrolled ? "bg-background/90 backdrop-blur-sm shadow-sm border-b" : "bg-transparent"
+      )}
+    >
+      <div className="container-custom py-4 flex justify-between items-center">
+        <Link
+          href={getLinkWithParams(`/${lang}`)}
+          className="text-xl font-cursive tracking-wide z-50 text-foreground"
         >
-          <Link
-            href={getLinkWithParams(`/${lang}`)}
-            className="text-xl font-cursive tracking-wide z-50 text-black"
-          >
-            J & J
-          </Link>
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            <ul className="flex space-x-8">
-              {menuItems.map((item) => (
-                <li key={item.key}>
-                  <Link
-                    href={getLinkWithParams(`/${lang}#${item.key}`)}
-                    className="text-sm hover:text-accent-active focus:text-accent-active transition-colors duration-300"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-            <div className="ml-6">
+          IT
+        </Link>
+
+        {/* Desktop Navigation */}
+        <NavigationMenu className="hidden md:flex">
+          <NavigationMenuList className="flex items-center space-x-8">
+            {menuItems.map((item) => (
+              <NavigationMenuItem key={item.key}>
+                <NavigationMenuLink
+                  href={getLinkWithParams(`/${lang}#${item.key}`)}
+                  className="text-sm hover:text-primary focus:text-primary transition-colors duration-300 bg-transparent text-foreground"
+                >
+                  {item.label}
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+            ))}
+            <NavigationMenuItem className="ml-6">
               <LanguageSwitcher currentLang={lang} />
-            </div>
-          </nav>
+            </NavigationMenuItem>
+            <NavigationMenuItem className="ml-2">
+            </NavigationMenuItem>
+          </NavigationMenuList>
+        </NavigationMenu>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden z-50 text-2xl"
-            onClick={toggleMenu}
-            aria-label={isOpen ? "Close menu" : "Open menu"}
-          >
-            {isOpen ? <FaTimes /> : <FaBars />}
-          </button>
-
-          {/* Mobile Menu */}
-          <AnimatePresence>
-            {isOpen && (
+        {/* Mobile Menu */}
+        <Sheet open={isOpen} onOpenChange={setIsOpen}>
+          <SheetTrigger asChild>
+            <button
+              className="md:hidden z-50 text-2xl transition-transform duration-300 hover:scale-110"
+              aria-label={isOpen ? "Close menu" : "Open menu"}
+            >
               <motion.div
-                initial={{ opacity: 0, x: "100%" }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: "100%" }}
+                animate={{ rotate: isOpen ? 180 : 0 }}
                 transition={{ duration: 0.3 }}
-                className="fixed top-0 left-0 w-full h-full bg-white flex flex-col items-center justify-center z-40"
-                style={{ height: "100vh", height: "100dvh" }}
               >
-                <nav>
-                  <ul className="flex flex-col items-center space-y-6">
-                    {menuItems.map((item) => (
-                      <motion.li
-                        key={item.key}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{
-                          delay: 0.1 * menuItems.indexOf(item),
-                        }}
-                      >
-                        <Link
-                          href={getLinkWithParams(`/${lang}#${item.key}`)}
-                          className="text-xl font-serif hover:text-black transition-colors duration-300"
-                          onClick={() => setIsOpen(false)}
-                        >
-                          {item.label}
-                        </Link>
-                      </motion.li>
-                    ))}
-                  </ul>
-                  <div className="mt-8 flex justify-center">
-                    <LanguageSwitcher currentLang={lang} />
-                  </div>
-                </nav>
+                <FaBars />
               </motion.div>
-            )}
-          </AnimatePresence>
-        </div>
-      </header>
-    </>
+            </button>
+          </SheetTrigger>
+          <SheetContent 
+            side="right" 
+            className="w-full sm:w-full max-w-none bg-background border-0 p-0"
+          >
+            <div className="flex flex-col h-full">
+              {/* Close button */}
+              <div className="flex justify-end p-6">
+                <button
+                  onClick={() => setIsOpen(false)}
+                  className="text-2xl text-foreground hover:scale-110 transition-transform duration-200"
+                  aria-label="Close menu"
+                >
+                  <FaTimes />
+                </button>
+              </div>
+
+              {/* Navigation content */}
+              <div className="flex-1 flex flex-col items-center justify-center space-y-8 px-6 pb-6">
+                {menuItems.map((item, index) => (
+                  <motion.div
+                    key={item.key}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ 
+                      delay: 0.1 + index * 0.1,
+                      type: "spring",
+                      stiffness: 100 
+                    }}
+                  >
+                    <Link
+                      href={getLinkWithParams(`/${lang}#${item.key}`)}
+                      className="text-2xl font-serif text-foreground hover:text-primary transition-colors duration-300 block text-center"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {item.label}
+                    </Link>
+                  </motion.div>
+                ))}
+                {/* Language Selector - Mobile */}
+                <motion.div 
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.1 + menuItems.length * 0.1 + 0.2 }}
+                  className="mt-8"
+                >
+                  <div className="text-center mb-4">
+                    <p className="text-sm text-muted-foreground mb-3">Language</p>
+                    <div className="flex justify-center gap-2">
+                      {languages.map((langOption) => (
+                        <button
+                          key={langOption}
+                          onClick={() => changeLanguage(langOption)}
+                          className={cn(
+                            "px-3 py-2 rounded-md text-sm font-medium transition-colors",
+                            langOption === lang 
+                              ? "bg-primary text-primary-foreground" 
+                              : "bg-muted text-muted-foreground hover:bg-primary hover:text-primary-foreground"
+                          )}
+                        >
+                          {getLanguageName(langOption)}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                </motion.div>
+
+              </div>
+            </div>
+          </SheetContent>
+        </Sheet>
+      </div>
+    </header>
   );
 }

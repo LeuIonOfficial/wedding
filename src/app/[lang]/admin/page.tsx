@@ -23,7 +23,7 @@ export default async function AdminPage({ params }: AdminPageProps) {
       <h1 className="text-3xl font-serif text-center mb-8">Wedding Admin</h1>
       
       <div className="max-w-4xl mx-auto">
-        <div className="bg-white rounded-lg shadow-lg p-6 mb-8">
+        <div className="bg-card rounded-lg shadow-lg p-6 mb-8">
           <h2 className="text-2xl font-serif mb-4">Admin Instructions</h2>
           <p className="mb-4">
             Use this page to generate personalized invitation links for your wedding guests.

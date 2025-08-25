@@ -21,7 +21,7 @@ interface FAQProps {
 
 export default function FAQ({ faq }: FAQProps) {
   // Using primary-100 color from palette
-  const contactEmail = "johnandjanewedding@example.com";
+  const contactEmail = "itsionleu@gmail.com";
   // Track which questions are open
   const [openQuestions, setOpenQuestions] = useState<Record<number, boolean>>(
     {},
@@ -48,7 +48,7 @@ export default function FAQ({ faq }: FAQProps) {
   });
 
   return (
-    <section id="faq" className="py-16 md:py-24 bg-background-secondary">
+    <section id="faq" className="py-16 md:py-24 bg-muted">
       <div className="container-custom max-w-4xl">
         {/* Section title */}
         <motion.div
@@ -58,8 +58,8 @@ export default function FAQ({ faq }: FAQProps) {
           animate={titleInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="font-serif mb-2 text-black">{faq.title}</h2>
-          <p className="text-black max-w-2xl mx-auto">{faq.subtitle}</p>
+          <h2 className="font-serif mb-2 text-foreground">{faq.title}</h2>
+          <p className="text-foreground max-w-2xl mx-auto">{faq.subtitle}</p>
         </motion.div>
 
         {/* Questions */}
@@ -84,7 +84,7 @@ export default function FAQ({ faq }: FAQProps) {
                   duration: 0.5,
                   delay: index * 0.1,
                 }}
-                className="bg-white rounded-lg shadow-sm overflow-hidden"
+                className="bg-card rounded-lg shadow-sm overflow-hidden"
               >
                 <button
                   onClick={() => toggleQuestion(index)}
@@ -95,7 +95,7 @@ export default function FAQ({ faq }: FAQProps) {
                     animate={{ rotate: isOpen ? 180 : 0 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <FaChevronDown className="text-black" />
+                    <FaChevronDown className="text-foreground" />
                   </motion.div>
                 </button>
 
@@ -108,7 +108,7 @@ export default function FAQ({ faq }: FAQProps) {
                   transition={{ duration: 0.3 }}
                   className="overflow-hidden"
                 >
-                  <div className="px-6 pb-4 text-black">{item.answer}</div>
+                  <div className="px-6 pb-4 text-card-foreground">{item.answer}</div>
                 </motion.div>
               </motion.div>
             );
@@ -121,13 +121,13 @@ export default function FAQ({ faq }: FAQProps) {
           initial={{ opacity: 0, y: 20 }}
           animate={contactInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}
-          className="bg-white p-8 rounded-lg shadow-md text-center"
+          className="bg-card p-8 rounded-lg shadow-md text-center"
         >
           <h3 className="font-serif text-2xl mb-4">{faq.contact.title}</h3>
-          <p className="text-black mb-6">{faq.contact.message}</p>
+          <p className="text-card-foreground mb-6">{faq.contact.message}</p>
           <a
             href={`mailto:${contactEmail}`}
-            className="inline-flex items-center text-black hover:underline"
+            className="inline-flex items-center text-card-foreground hover:underline"
           >
             <FaEnvelope className="mr-2" />
             {contactEmail}

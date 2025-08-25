@@ -86,7 +86,7 @@ export default function InvitationLinkGenerator({
   };
   
   return (
-    <div className="max-w-2xl mx-auto bg-white rounded-lg shadow p-6 my-8">
+    <div className="max-w-2xl mx-auto bg-card rounded-lg shadow p-6 my-8">
       <h2 className="text-2xl font-serif mb-4">{title}</h2>
       
       <div className="mb-6">
@@ -94,7 +94,7 @@ export default function InvitationLinkGenerator({
           Enter guest names (one per line):
         </label>
         <textarea
-          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent"
+          className="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
           rows={5}
           value={guestNames}
           onChange={(e) => setGuestNames(e.target.value)}
@@ -104,7 +104,7 @@ export default function InvitationLinkGenerator({
       
       <button
         onClick={generateLinks}
-        className="bg-accent hover:bg-accent-dark text-white font-medium py-2 px-4 rounded transition-colors"
+        className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium py-2 px-4 rounded transition-colors"
       >
         {buttonText}
       </button>
@@ -113,7 +113,7 @@ export default function InvitationLinkGenerator({
         <div className="mt-8">
           <button
             onClick={downloadCSV}
-            className="mb-4 bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded transition-colors"
+            className="mb-4 bg-secondary hover:bg-secondary/90 text-primary-foreground font-medium py-2 px-4 rounded transition-colors"
           >
             Export as Excel (CSV)
           </button>
@@ -122,7 +122,7 @@ export default function InvitationLinkGenerator({
               onClick={() => setActiveTab('list')}
               className={`py-2 px-4 font-medium ${
                 activeTab === 'list'
-                  ? 'border-b-2 border-accent text-accent'
+                  ? 'border-b-2 border-primary text-primary'
                   : 'text-gray-500 hover:text-gray-700'
               }`}
             >
@@ -137,7 +137,7 @@ export default function InvitationLinkGenerator({
               }}
               className={`py-2 px-4 font-medium ${
                 activeTab === 'qrcode'
-                  ? 'border-b-2 border-accent text-accent'
+                  ? 'border-b-2 border-primary text-primary'
                   : 'text-gray-500 hover:text-gray-700'
               }`}
             >
@@ -157,13 +157,13 @@ export default function InvitationLinkGenerator({
                         type="text"
                         readOnly
                         value={item.link}
-                        className="flex-1 text-sm p-2 bg-white border border-gray-300 rounded"
+                        className="flex-1 text-sm p-2 bg-card border border-border rounded"
                       />
                       <button
                         onClick={() => copyToClipboard(item.link, item.name)}
                         className={`text-sm py-2 px-3 rounded ${
                           copied === item.name
-                            ? 'bg-green-500 text-white'
+                            ? 'bg-primary text-primary-foreground'
                             : 'bg-gray-200 hover:bg-gray-300'
                         }`}
                       >
@@ -171,7 +171,7 @@ export default function InvitationLinkGenerator({
                       </button>
                       <button
                         onClick={() => showQRCode(item.name)}
-                        className="text-sm py-2 px-3 rounded bg-accent text-white"
+                        className="text-sm py-2 px-3 rounded bg-primary text-primary-foreground"
                       >
                         QR
                       </button>
@@ -188,7 +188,7 @@ export default function InvitationLinkGenerator({
                 <select 
                   value={selectedGuest || ''} 
                   onChange={(e) => setSelectedGuest(e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md"
+                  className="w-full px-3 py-2 border border-border rounded-md"
                 >
                   {generatedLinks.map((item, index) => (
                     <option key={index} value={item.name}>
@@ -198,7 +198,7 @@ export default function InvitationLinkGenerator({
                 </select>
               </div>
               
-              <div className="bg-white p-4 rounded-lg shadow-md">
+              <div className="bg-card p-4 rounded-lg shadow-md">
                 <QRCode 
                   value={selectedGuestLink} 
                   size={200}
@@ -214,8 +214,8 @@ export default function InvitationLinkGenerator({
                 onClick={() => copyToClipboard(selectedGuestLink, selectedGuest || '')}
                 className={`mt-4 py-2 px-4 rounded ${
                   copied === selectedGuest
-                    ? 'bg-green-500 text-white'
-                    : 'bg-accent text-white hover:bg-accent-dark'
+                    ? 'bg-primary text-primary-foreground'
+                    : 'bg-primary text-primary-foreground hover:bg-primary/90'
                 }`}
               >
                 {copied === selectedGuest ? 'Copied!' : 'Copy Link'}

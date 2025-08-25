@@ -119,7 +119,7 @@ export default function RSVP({ rsvp }: RSVPProps) {
   };
 
   return (
-    <section id="rsvp" className="py-16 md:py-24 bg-background-primary">
+    <section id="rsvp" className="py-16 md:py-24 bg-background">
       <div className="container-custom max-w-4xl">
         {/* Section title */}
         <motion.div
@@ -129,9 +129,9 @@ export default function RSVP({ rsvp }: RSVPProps) {
           animate={titleInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="font-serif mb-2 text-charcoal">{rsvp.title}</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">{rsvp.subtitle}</p>
-          <p className="text-gray-600 mt-2 font-medium">{deadline}</p>
+          <h2 className="font-serif mb-2 text-foreground">{rsvp.title}</h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto">{rsvp.subtitle}</p>
+          <p className="text-muted-foreground mt-2 font-medium">{deadline}</p>
         </motion.div>
 
         {/* Form */}
@@ -141,14 +141,14 @@ export default function RSVP({ rsvp }: RSVPProps) {
           animate={formInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <div className="bg-white rounded-lg shadow-lg p-6 md:p-8">
+          <div className="bg-card rounded-lg shadow-lg p-6 md:p-8">
             {submitSuccess === true ? (
               <div className="text-center py-8">
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-100 text-green-600 mb-4">
                   <FaCheck size={24} />
                 </div>
                 <h3 className="font-serif text-2xl mb-4">Thank You!</h3>
-                <p className="text-gray-600">{rsvp.confirmation.success}</p>
+                <p className="text-card-foreground">{rsvp.confirmation.success}</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -156,7 +156,7 @@ export default function RSVP({ rsvp }: RSVPProps) {
                 <div>
                   <label
                     htmlFor="name"
-                    className="block text-charcoal font-medium mb-2"
+                    className="block text-card-foreground font-medium mb-2"
                   >
                     {rsvp.form.name.label}*
                   </label>
@@ -168,16 +168,16 @@ export default function RSVP({ rsvp }: RSVPProps) {
                     onChange={handleChange}
                     placeholder={rsvp.form.name.placeholder}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
+                    className="w-full px-4 py-3 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                   />
                 </div>
 
                 {/* Attending */}
                 <div>
-                  <label className="block text-charcoal font-medium mb-2">
+                  <label className="block text-card-foreground font-medium mb-2">
                     {rsvp.form.attending.label}*
                   </label>
-                  <div className="flex space-x-4">
+                  <div className="flex flex-col gap-2">
                     <label className="flex items-center">
                       <input
                         type="radio"
@@ -185,7 +185,7 @@ export default function RSVP({ rsvp }: RSVPProps) {
                         value="yes"
                         checked={formData.attending === "yes"}
                         onChange={handleChange}
-                        className="mr-2 text-accent focus:ring-accent"
+                        className="mr-2 text-primary focus:ring-primary"
                       />
                       {rsvp.form.attending.options.yes}
                     </label>
@@ -196,7 +196,7 @@ export default function RSVP({ rsvp }: RSVPProps) {
                         value="no"
                         checked={formData.attending === "no"}
                         onChange={handleChange}
-                        className="mr-2 text-accent focus:ring-accent"
+                        className="mr-2 text-primary focus:ring-primary"
                       />
                       {rsvp.form.attending.options.no}
                     </label>
@@ -208,7 +208,7 @@ export default function RSVP({ rsvp }: RSVPProps) {
                   <div>
                     <label
                       htmlFor="guests"
-                      className="block text-charcoal font-medium mb-2"
+                      className="block text-card-foreground font-medium mb-2"
                     >
                       {rsvp.form.guests.label}*
                     </label>
@@ -218,7 +218,7 @@ export default function RSVP({ rsvp }: RSVPProps) {
                       value={formData.guests}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
+                      className="w-full px-4 py-3 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                     >
                       {[1, 2, 3, 4, 5].map((num) => (
                         <option key={num} value={num}>
@@ -234,7 +234,7 @@ export default function RSVP({ rsvp }: RSVPProps) {
                   <div>
                     <label
                       htmlFor="dietary"
-                      className="block text-charcoal font-medium mb-2"
+                      className="block text-card-foreground font-medium mb-2"
                     >
                       {rsvp.form.dietary.label}
                     </label>
@@ -245,7 +245,7 @@ export default function RSVP({ rsvp }: RSVPProps) {
                       value={formData.dietary}
                       onChange={handleChange}
                       placeholder={rsvp.form.dietary.placeholder}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
+                      className="w-full px-4 py-3 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                     />
                   </div>
                 )}
@@ -254,7 +254,7 @@ export default function RSVP({ rsvp }: RSVPProps) {
                 <div>
                   <label
                     htmlFor="message"
-                    className="block text-charcoal font-medium mb-2"
+                    className="block text-card-foreground font-medium mb-2"
                   >
                     {rsvp.form.message.label}
                   </label>
@@ -265,13 +265,13 @@ export default function RSVP({ rsvp }: RSVPProps) {
                     onChange={handleChange}
                     placeholder={rsvp.form.message.placeholder}
                     rows={4}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
+                    className="w-full px-4 py-3 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                   />
                 </div>
 
                 {/* Error message */}
                 {submitSuccess === false && (
-                  <div className="p-4 bg-red-50 text-red-600 rounded-md flex items-start">
+                  <div className="p-4 bg-destructive/15 text-destructive rounded-md flex items-start">
                     <FaTimes className="mr-2 mt-1 flex-shrink-0" />
                     <span>{errorMessage}</span>
                   </div>
@@ -282,16 +282,16 @@ export default function RSVP({ rsvp }: RSVPProps) {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className={`w-full flex items-center justify-center px-6 py-3 bg-accent text-white rounded-md font-medium transition-all duration-300 ${
+                    className={`w-full flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground rounded-md font-medium transition-all duration-300 ${
                       isSubmitting
                         ? "opacity-70 cursor-not-allowed"
-                        : "hover:bg-accent-dark"
+                        : "hover:bg-primary/90"
                     }`}
                   >
                     {isSubmitting ? (
                       <>
                         <svg
-                          className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+                          className="animate-spin -ml-1 mr-3 h-5 w-5 text-primary-foreground"
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"

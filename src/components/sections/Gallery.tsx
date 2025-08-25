@@ -107,7 +107,7 @@ export default function Gallery({ gallery }: GalleryProps) {
 					transition={{ duration: 0.6 }}
 				>
 					<h2 className="font-serif mb-2">{gallery.title}</h2>
-					<p className="text-primary-500 max-w-2xl mx-auto">
+					<p className="text-muted-foreground max-w-2xl mx-auto">
 						{gallery.subtitle}
 					</p>
 				</motion.div>
@@ -151,7 +151,7 @@ export default function Gallery({ gallery }: GalleryProps) {
 										className="object-cover"
 									/>
 									<div className="absolute bottom-0 left-0 right-0 bg-black/50 p-3">
-										<p className="text-white text-sm">
+										<p className="text-primary-foreground text-sm">
 											{photo.caption}
 										</p>
 									</div>
@@ -172,7 +172,7 @@ export default function Gallery({ gallery }: GalleryProps) {
 						onClick={closeLightbox}
 					>
 						<button
-							className="absolute top-6 right-6 text-white p-2 text-2xl z-10"
+							className="absolute top-6 right-6 text-primary-foreground p-2 text-2xl z-10"
 							onClick={closeLightbox}
 							aria-label="Close lightbox"
 						>
@@ -192,7 +192,7 @@ export default function Gallery({ gallery }: GalleryProps) {
 								/>
 							</div>
 							<div className="absolute bottom-0 left-0 right-0 bg-black/50 p-4">
-								<p className="text-white text-center">
+								<p className="text-primary-foreground text-center">
 									{galleryPhotos[selectedImage].caption}
 								</p>
 							</div>

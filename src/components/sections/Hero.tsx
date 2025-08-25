@@ -10,18 +10,33 @@ import {
   getWeddingLocation,
   getWeddingDateTime,
 } from "@/lib/utils";
+import { Lang } from "@/types";
 
 interface HeroProps {
   hero: {
     scrollCta: string;
   };
   guestName?: string;
+  lang: Lang;
 }
 
 export default function Hero(props: HeroProps) {
-  const { hero } = props;
+  const { hero, lang } = props;
   const [imageLoaded, setImageLoaded] = useState(false);
   const [isClient, setIsClient] = useState(false);
+
+  // Get localized greeting
+  const getLocalizedGreeting = (language: Lang): string => {
+    switch (language) {
+      case 'ru':
+        return 'Дорогие';
+      case 'ro':
+        return 'Dragii noștri';
+      case 'en':
+      default:
+        return 'Welcome';
+    }
+  };
 
   // Hardcoded values
   const backgroundImage = "/images/hero/№999_686-2.JPG";
@@ -114,13 +129,13 @@ export default function Hero(props: HeroProps) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="p-5"
+            className="p-5 max-w-4xl mx-auto"
           >
-            <h2 className="font-serif text-xl sm:text-2xl md:text-3xl mb-4">
-              <span className="bg-white/90 text-charcoal border border-accent px-6 py-3 rounded-lg backdrop-blur-sm shadow-lg">
-                Welcome, {props.guestName}!
-              </span>
-            </h2>
+            <div className="bg-background/90 text-foreground border border-border px-4 py-3 sm:px-6 sm:py-4 rounded-lg backdrop-blur-sm shadow-lg">
+              <h2 className="font-serif text-lg sm:text-xl md:text-2xl text-center break-words hyphens-auto">
+                {getLocalizedGreeting(lang)}, {props.guestName}!
+              </h2>
+            </div>
           </motion.div>
         )}
 
@@ -141,7 +156,7 @@ export default function Hero(props: HeroProps) {
       >
         <a
           href="#story"
-          className="inline-flex flex-col items-center text-xs sm:text-sm"
+          className="inline-flex flex-col text-white/90 items-center text-xs mb-8 sm:text-sm"
           aria-label={hero.scrollCta}
         >
           <span className="mb-2">{hero.scrollCta}</span>
@@ -153,13 +168,7 @@ export default function Hero(props: HeroProps) {
           </motion.div>
         </a>
       </motion.div>
-      {/* Mobile scroll indicator (mouse) */}
-      <div className="scroll-indicator block md:hidden">
-        <span className="mouse">
-          <span className="scroll"></span>
-        </span>
-        <p>{hero.scrollCta || "Scroll Down"}</p>
-      </div>
+    
     </section>
   );
 }

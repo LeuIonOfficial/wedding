@@ -2,6 +2,7 @@ import './globals.css';
 import { Montserrat, Playfair_Display, Dancing_Script } from 'next/font/google';
 import { Metadata } from 'next';
 
+
 const montserrat = Montserrat({
   subsets: ['latin', 'cyrillic', 'latin-ext'],
   variable: '--font-montserrat',
@@ -31,9 +32,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <body className={`${montserrat.variable} ${playfair.variable} ${dancing.variable} font-sans`}>
-        {children}
+          {children}
       </body>
     </html>
   );

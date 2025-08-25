@@ -40,7 +40,7 @@ export default async function Home({ params, searchParams }: PageProps) {
 
   return (
     <main>
-      <Hero hero={content.hero} guestName={guestNames} />
+      <Hero hero={content.hero} guestName={guestNames} lang={lang as Lang} />
       <Story story={content.story} />
       <Event event={content.event} />
       <RSVP rsvp={content.rsvp} />

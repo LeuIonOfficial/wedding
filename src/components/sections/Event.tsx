@@ -77,7 +77,7 @@ export default function Event({ event }: EventProps) {
   };
 
   return (
-    <section id="event" className="py-16 md:py-24 bg-background-secondary">
+    <section id="event" className="py-16 md:py-24 bg-muted">
       <div className="container-custom">
         {/* Section title */}
         <motion.div
@@ -87,8 +87,8 @@ export default function Event({ event }: EventProps) {
           animate={titleInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="font-serif mb-2 text-charcoal">{event.title}</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">{event.subtitle}</p>
+          <h2 className="font-serif mb-2 text-foreground">{event.title}</h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto">{event.subtitle}</p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
@@ -100,7 +100,7 @@ export default function Event({ event }: EventProps) {
               ceremonyInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }
             }
             transition={{ duration: 0.6 }}
-            className="bg-white rounded-lg shadow-md overflow-hidden"
+            className="bg-card rounded-lg shadow-md overflow-hidden"
           >
             {ceremonyData.image ? (
               <div className="relative h-64 w-full">
@@ -112,8 +112,8 @@ export default function Event({ event }: EventProps) {
                 />
               </div>
             ) : (
-              <div className="h-64 w-full flex items-center justify-center bg-white">
-                <h3 className="text-white font-serif text-2xl">
+              <div className="h-64 w-full flex items-center justify-center bg-card">
+                <h3 className="text-primary-foreground font-serif text-2xl">
                   {event.ceremony.title}
                 </h3>
               </div>
@@ -125,21 +125,21 @@ export default function Event({ event }: EventProps) {
 
               <div className="space-y-4">
                 <div className="flex items-start">
-                  <FaCalendarAlt className="text-charcoal mt-1 mr-3" />
+                  <FaCalendarAlt className="text-card-foreground mt-1 mr-3" />
                   <div>
                     <p className="font-medium">{ceremonyData.date}</p>
                   </div>
                 </div>
 
                 <div className="flex items-start">
-                  <FaClock className="text-charcoal mt-1 mr-3" />
+                  <FaClock className="text-card-foreground mt-1 mr-3" />
                   <div>
                     <p className="font-medium">{ceremonyData.time}</p>
                   </div>
                 </div>
 
                 <div className="flex items-start">
-                  <FaMapMarkerAlt className="text-charcoal mt-1 mr-3" />
+                  <FaMapMarkerAlt className="text-card-foreground mt-1 mr-3" />
                   <div>
                     <p className="font-medium">
                       {formatAddress(ceremonyData.address)}
@@ -148,7 +148,7 @@ export default function Event({ event }: EventProps) {
                 </div>
               </div>
 
-              <div className="mt-4 pt-4 border-t border-gray-200">
+              <div className="mt-4 pt-4 border-t border-border">
                 <p>{event.ceremony.description}</p>
               </div>
             </div>
@@ -162,7 +162,7 @@ export default function Event({ event }: EventProps) {
               receptionInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }
             }
             transition={{ duration: 0.6 }}
-            className="bg-white rounded-lg shadow-md overflow-hidden"
+            className="bg-card rounded-lg shadow-md overflow-hidden"
           >
             {receptionData.image ? (
               <div className="relative h-64 w-full">
@@ -178,7 +178,7 @@ export default function Event({ event }: EventProps) {
                 className="h-64 w-full flex items-center justify-center"
                 style={{ backgroundColor: receptionData.backgroundColor }}
               >
-                <h3 className="text-white font-serif text-2xl">
+                <h3 className="text-primary-foreground font-serif text-2xl">
                   {event.reception.title}
                 </h3>
               </div>
@@ -190,21 +190,21 @@ export default function Event({ event }: EventProps) {
 
               <div className="space-y-4">
                 <div className="flex items-start">
-                  <FaCalendarAlt className="text-charcoal mt-1 mr-3" />
+                  <FaCalendarAlt className="text-card-foreground mt-1 mr-3" />
                   <div>
                     <p className="font-medium">{receptionData.date}</p>
                   </div>
                 </div>
 
                 <div className="flex items-start">
-                  <FaClock className="text-charcoal mt-1 mr-3" />
+                  <FaClock className="text-card-foreground mt-1 mr-3" />
                   <div>
                     <p className="font-medium">{receptionData.time}</p>
                   </div>
                 </div>
 
                 <div className="flex items-start">
-                  <FaMapMarkerAlt className="text-charcoal mt-1 mr-3" />
+                  <FaMapMarkerAlt className="text-card-foreground mt-1 mr-3" />
                   <div>
                     <p className="font-medium">
                       {formatAddress(receptionData.address)}
@@ -213,7 +213,7 @@ export default function Event({ event }: EventProps) {
                 </div>
               </div>
 
-              <div className="mt-4 pt-4 border-t border-gray-200">
+              <div className="mt-4 pt-4 border-t border-border">
                 <p>{event.reception.description}</p>
               </div>
             </div>
